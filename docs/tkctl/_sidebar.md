@@ -1,5 +1,3 @@
-# tkctl CLI 가이드
-
 - [서비스 개요](OVERVIEW.md)
 - **핵심 기능**
   - [명령어 옵션](01-cli-options.md)
