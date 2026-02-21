@@ -1,14 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
-    <meta charset="utf-8">
-    <title>Redirecting to GitHub Releases</title>
-    <meta http-equiv="refresh" content="0; url=https://github.com/taemire/tkadmin-releases/releases">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tkadmin 문서 포털</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --primary-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --secondary-gradient: linear-gradient(135deg, #fb7185 0%, #f472b6 100%);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(244, 114, 182, 0.15) 0%, transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            z-index: 100;
+        }
+
+        .nav-item {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 28px;
+            padding: 3.5rem 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .icon-box {
+            width: 90px;
+            height: 90px;
+            border-radius: 24px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .admin .icon-box {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+        }
+
+        .ctl .icon-box {
+            background: rgba(244, 114, 182, 0.1);
+            color: #f472b6;
+        }
+
+        .btn-entry {
+            padding: 0.75rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+        }
+    </style>
 </head>
 
 <body>
-    <p>Redirecting to <a href="https://github.com/taemire/tkadmin-releases/releases">GitHub Releases</a>...</p>
+    <nav class="nav-links">
+        <a href="https://github.com/taemire/tkadmin-releases" class="nav-item">GitHub Repository</a>
+        <a href="../" class="nav-item">🔙 Home</a>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>tkadmin 문서 포털</h1>
+            <p style="color: var(--text-muted); margin-top: 1rem;">TACHYON 솔루션 기술 가이드 시스템</p>
+        </header>
+        <div class="portal-grid">
+            <a href="tkadmin/" class="card admin">
+                <div class="icon-box">🖥️</div>
+                <h2>tkadmin 사용자 매뉴얼</h2>
+                <p style="color: var(--text-muted); margin: 1.5rem 0 2.5rem;">웹 기반 운영 도구 가이드</p>
+                <div class="btn-entry">매뉴얼 열기</div>
+            </a>
+            <a href="tkctl/" class="card ctl">
+                <div class="icon-box">⌨️</div>
+                <h2>tkctl CLI 매뉴얼</h2>
+                <p style="color: var(--text-muted); margin: 1.5rem 0 2.5rem;">CLI 명령어 및 자동화 가이드</p>
+                <div class="btn-entry">CLI 가이드 열기</div>
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
