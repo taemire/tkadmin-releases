@@ -13,14 +13,45 @@
       --theme-color: #fb7185;
     }
 
-    .sidebar {
-      background-color: #fff1f2;
+    .app-nav {
+      position: fixed;
+      margin: 0;
+      padding: 10px 50px 10px 0;
+      width: calc(100% - 300px);
+      background: #fff;
+      z-index: 10;
+      text-align: right;
+      border-bottom: 1px solid #eee;
+    }
+
+    .app-nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #666;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .app-nav a.active {
+      color: var(--theme-color);
+      border-bottom: 2px solid var(--theme-color);
+    }
+
+    @media screen and (max-width: 768px) {
+      .app-nav {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div id="app">CLI 가이드 로딩 중...</div>
+  <nav class="app-nav">
+    <a href="../tkadmin/">🖥️ tkadmin (웹)</a>
+    <a href="#/" class="active">⌨️ tkctl (CLI)</a>
+    <a href="https://github.com/taemire/tkadmin-releases/releases">📦 다운로드</a>
+  </nav>
+  <div id="app">로딩 중...</div>
   <script>
     window.$docsify = {
       name: 'tkctl',
