@@ -4,7 +4,7 @@
 
 ## 1. 릴리즈 리포지토리 구성
 - **Repository**: `taemire/tkadmin-releases` (Public)
-- **GitHub Pages**: `https://taemire.github.io/tkadmin-releases/`
+- **GitHub Pages**: `https://taemire.github.io/tkadmin-releases/docs/`
 - **목적**: 
   - 정규 릴리즈 바이너리(Linux/Windows) 배포
   - `tkctl` 전용 온라인 사용자 메뉴얼 호스팅
