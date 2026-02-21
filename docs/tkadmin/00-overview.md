@@ -6,7 +6,7 @@
 
 tkadmin은 TACHYON 솔루션이 설치된 리눅스 서버에 배포되어, 운영자가 별도의 터미널 접속 없이도 웹 브라우저만으로 솔루션의 전반적인 설정과 상태를 관리할 수 있도록 지원합니다. 특히 폐쇄망(Air-gap) 환경에서도 외부 인터넷 연결 없이 100% 동작하도록 설계되었습니다.
 
-- **제품 버전**: 0.2.3
+- **제품 버전**: 0.6.0
 - **기술 스택**: Go (Gin) + Vanilla JS (Web Components) + Monaco Editor
 
 ---
@@ -128,5 +128,5 @@ tkadmin의 메인 화면은 다음과 같은 영역으로 구성됩니다:
 
 ## 다음 단계
 
-- [설치 가이드](../2-getting-started/01-installation.md)로 이동하여 tkadmin을 설치하세요.
-- [최초 접속](../2-getting-started/02-first-login.md)에서 로그인 및 화면 구성을 확인하세요.
+- [설치 가이드](01-installation.md)로 이동하여 tkadmin을 설치하세요.
+- [최초 접속](02-first-login.md)에서 로그인 및 화면 구성을 확인하세요.

@@ -20,11 +20,11 @@
 
 ## 빠른 링크
 
-- [서비스 소개](1-intro/01-overview.md) — tkadmin이 무엇인지 알아보기
-- [설치 및 초기 설정](2-getting-started/01-installation.md) — 바로 설치 시작하기
-- [첫 로그인](2-getting-started/02-first-login.md) — 처음 접속 시 해야 할 일
-- [대시보드](3-features/01-dashboard.md) — 메인 화면 사용법
-- [FAQ 및 문제 해결](5-troubleshooting/01-faq.md) — 문제가 생겼을 때
+- [서비스 소개](00-overview.md) — tkadmin이 무엇인지 알아보기
+- [설치 및 초기 설정](01-installation.md) — 바로 설치 시작하기
+- [첫 로그인](02-first-login.md) — 처음 접속 시 해야 할 일
+- [대시보드](01-dashboard.md) — 메인 화면 사용법
+- [FAQ 및 문제 해결](99-faq.md) — 문제가 생겼을 때
 
 ---
 

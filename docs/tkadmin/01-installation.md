@@ -18,20 +18,21 @@ tkadmin을 설치하기 전에 다음 조건이 충족되어야 합니다:
 
 tkadmin은 **단일 바이너리** 파일로 배포됩니다. 별도의 설치 패키지나 의존성 라이브러리가 필요하지 않습니다.
 
-1. 배포받은 `tkadmin` 바이너리 파일을 TACHYON 설치 경로에 복사합니다.
+1. 배포받은 `tkadmin`, `tkctl` 바이너리 파일을 설치 경로에 복사합니다.
 
 ```bash
-# 바이너리를 TACHYON 설치 경로로 복사
-cp tkadmin /usr/local/TACHYON/TTS40/tkadmin
+# 설치 디렉토리 생성
+sudo mkdir -p /usr/local/tkadmin/bin
 
-# 실행 권한 부여
-chmod +x /usr/local/TACHYON/TTS40/tkadmin
+# 바이너리 복사 및 실행 권한 부여
+sudo cp tkadmin tkctl /usr/local/tkadmin/bin/
+sudo chmod +x /usr/local/tkadmin/bin/tkadmin /usr/local/tkadmin/bin/tkctl
 ```
 
 2. 바이너리 버전을 확인합니다.
 
 ```bash
-/usr/local/TACHYON/TTS40/tkadmin -v
+/usr/local/tkadmin/bin/tkadmin -v
 ```
 
 ---
@@ -43,13 +44,7 @@ chmod +x /usr/local/TACHYON/TTS40/tkadmin
 다음 명령어로 tkadmin을 시스템 서비스로 등록합니다:
 
 ```bash
-/usr/local/TACHYON/TTS40/tkadmin -i
-```
-
-또는 긴 옵션을 사용할 수 있습니다:
-
-```bash
-/usr/local/TACHYON/TTS40/tkadmin --install
+/usr/local/tkadmin/bin/tkadmin -i
 ```
 
 `-i` 옵션은 다음 작업을 자동으로 수행합니다:
@@ -108,13 +103,7 @@ systemctl status nginx
 tkadmin을 시스템에서 완전히 제거하려면 다음 명령어를 실행합니다:
 
 ```bash
-/usr/local/TACHYON/TTS40/tkadmin -u
-```
-
-또는:
-
-```bash
-/usr/local/TACHYON/TTS40/tkadmin --uninstall
+/usr/local/tkadmin/bin/tkadmin -u
 ```
 
 `-u` 옵션은 다음 작업을 수행합니다:
@@ -140,23 +129,18 @@ systemctl stop tkadmin
 2. 기존 바이너리를 새 바이너리로 교체
 
 ```bash
-# 기존 바이너리 삭제
-rm /usr/local/TACHYON/TTS40/tkadmin
-
-# 새 바이너리 복사
-cp tkadmin_new /usr/local/TACHYON/TTS40/tkadmin
-chmod +x /usr/local/TACHYON/TTS40/tkadmin
+# 새 바이너리로 교체
+sudo cp tkadmin tkctl /usr/local/tkadmin/bin/
+sudo chmod +x /usr/local/tkadmin/bin/tkadmin /usr/local/tkadmin/bin/tkctl
 ```
 
 3. 새 바이너리로 재설치
 
 ```bash
-/usr/local/TACHYON/TTS40/tkadmin -i
+/usr/local/tkadmin/bin/tkadmin -i
 ```
 
 !> **주의**: 업데이트 시 **기존 바이너리의 `-u` 옵션을 절대 실행하지 마세요.** 버그가 있는 기존 버전이 시스템을 손상시킬 수 있는 Critical Bug가 보고되어 있습니다. 반드시 `systemctl stop` -> 바이너리 교체 -> 새 바이너리 `-i` 순서를 따르세요.
-
-!> **주의**: 로그 파일 경로가 `/usr/local/TACHYON/TTS40/logs/tkadmin.log`로 올바르게 설정되었는지 반드시 확인하세요. 경로가 잘못 설정되면 제품 디렉토리가 손상될 수 있습니다.
 
 ---
 
@@ -164,13 +148,14 @@ chmod +x /usr/local/TACHYON/TTS40/tkadmin
 
 | 옵션 | 설명 |
 |------|------|
-| `-i`, `--install` | systemd 서비스 등록, NGINX 설정 주입, 인젝터 설치 |
-| `-u`, `--uninstall` | 서비스 중지/삭제, NGINX 설정 제거, 인젝터 원복 |
-| `-k`, `--kill` | 실행 중인 tkadmin 프로세스 강제 종료 |
-| `-r`, `--run` | 백그라운드 데몬 모드로 실행 |
+| `-i` | systemd 서비스 등록, NGINX 설정 주입, 인젝터 설치 |
+| `-u` | 서비스 중지/삭제, NGINX 설정 제거, 인젝터 원복 |
+| `-k` | 실행 중인 tkadmin 프로세스 강제 종료 |
+| `-r` | 백그라운드 데몬 모드로 실행 |
 | `-v` | 버전 정보 출력 |
 | `service start` | 시스템 서비스 시작 |
 | `service stop` | 시스템 서비스 중지 |
+| `service restart` | 시스템 서비스 재시작 |
 | `service status` | 시스템 서비스 상태 조회 |
 
 ---
