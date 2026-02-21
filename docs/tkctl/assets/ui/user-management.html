@@ -1,0 +1,257 @@
+<div class="ui-mockup-wrapper">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        .ui-mockup-wrapper {
+            padding: 24px;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #F0F2F5;
+            border-radius: 16px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        /* Top Bar / Header */
+        .ui-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .ui-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ui-title-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1D1F23;
+        }
+
+        .ui-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1D1F23;
+            margin: 0;
+        }
+
+        /* User List Area */
+        .ui-user-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ui-user-card {
+            background: #FFFFFF;
+            border: 1px solid #E1E8ED;
+            border-radius: 14px;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .ui-user-card:hover {
+            border-color: #1D9BF0;
+            transform: translateY(-1px);
+        }
+
+        .ui-user-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .ui-user-avatar {
+            width: 44px;
+            height: 44px;
+            background: #EFF3F4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #536471;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .ui-user-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .ui-username {
+            font-size: 16px;
+            font-weight: 800;
+            color: #1D1F23;
+        }
+
+        .ui-user-badges {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        /* Badges */
+        .ui-badge {
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .ui-badge-role {
+            background: #F3E8FF;
+            color: #7E22CE;
+        }
+
+        .ui-badge-status-active {
+            background: #DCFCE7;
+            color: #15803D;
+        }
+
+        .ui-badge-status-locked {
+            background: #FEE2E2;
+            color: #B91C1C;
+        }
+
+        .ui-user-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .ui-btn-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid #EFF3F4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #536471;
+            background: #FFF;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .ui-btn-icon:hover {
+            background: #F7F9F9;
+            color: #1D9BF0;
+            border-color: #1D9BF0;
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] .ui-mockup-wrapper {
+            background: #000;
+        }
+
+        [data-theme="dark"] .ui-user-card {
+            background: #16181C;
+            border-color: #2F3336;
+        }
+
+        [data-theme="dark"] .ui-title {
+            color: #E7E9EA;
+        }
+
+        [data-theme="dark"] .ui-username {
+            color: #E7E9EA;
+        }
+
+        [data-theme="dark"] .ui-user-avatar {
+            background: #2F3336;
+            color: #71767B;
+        }
+
+        [data-theme="dark"] .ui-btn-icon {
+            background: #16181C;
+            border-color: #2F3336;
+            color: #71767B;
+        }
+
+        [data-theme="dark"] .ui-badge-role {
+            background: #3B0764;
+            color: #D8B4FE;
+        }
+    </style>
+
+    <div class="ui-header-bar">
+        <div class="ui-title-group">
+            <div class="ui-title-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+            </div>
+            <h1 class="ui-title">사용자 관리</h1>
+        </div>
+    </div>
+
+    <div class="ui-user-list">
+        <div class="ui-user-card">
+            <div class="ui-user-info">
+                <div class="ui-user-avatar">A</div>
+                <div class="ui-user-details">
+                    <div class="ui-username">admin</div>
+                    <div class="ui-user-badges">
+                        <span class="ui-badge ui-badge-role">System Admin</span>
+                        <span class="ui-badge ui-badge-status-active">정상</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-user-actions">
+                <button class="ui-btn-icon">⚙️</button>
+                <button class="ui-btn-icon">🔑</button>
+            </div>
+        </div>
+
+        <div class="ui-user-card">
+            <div class="ui-user-info">
+                <div class="ui-user-avatar">G</div>
+                <div class="ui-user-details">
+                    <div class="ui-username">gildong_hong</div>
+                    <div class="ui-user-badges">
+                        <span class="ui-badge ui-badge-role">Signer</span>
+                        <span class="ui-badge ui-badge-status-active">정상</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-user-actions">
+                <button class="ui-btn-icon">⚙️</button>
+                <button class="ui-btn-icon">🔑</button>
+            </div>
+        </div>
+
+        <div class="ui-user-card">
+            <div class="ui-user-info">
+                <div class="ui-user-avatar" style="background:#FEE2E2; color:#B91C1C;">L</div>
+                <div class="ui-user-details">
+                    <div class="ui-username" style="color:#B91C1C;">locked_user</div>
+                    <div class="ui-user-badges">
+                        <span class="ui-badge ui-badge-role">Viewer</span>
+                        <span class="ui-badge ui-badge-status-locked">잠금</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-user-actions">
+                <button class="ui-btn-icon">⚙️</button>
+                <button class="ui-btn-icon">🔑</button>
+            </div>
+        </div>
+    </div>
+</div>

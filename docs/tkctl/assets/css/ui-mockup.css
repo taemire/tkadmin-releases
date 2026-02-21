@@ -1,0 +1,1166 @@
+/* UI Mockup Styles for CodeSign Service User Manual */
+.ui-auth-card,
+.ui-auth-card *,
+.ui-modal-mock-container,
+.ui-modal-mock-container *,
+.ui-menu-bar-mock,
+.ui-menu-bar-mock *,
+.ui-admin-card,
+.ui-admin-card *,
+.ui-dropdown-mock,
+.ui-dropdown-mock * {
+    box-sizing: border-box !important;
+}
+
+:root {
+    --ui-accent-blue: #1D9BF0;
+    --ui-accent-blue-hover: #1A8CD8;
+    --ui-accent-green: #00BA7C;
+    --ui-accent-red: #F4212E;
+    --ui-text-primary: #0F1419;
+    --ui-text-secondary: #536471;
+    --ui-bg-primary: #FFFFFF;
+    --ui-bg-secondary: #F7F9F9;
+    --ui-border-color: #EFF3F4;
+}
+
+.ui-mockup-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    clear: both !important;
+    margin: 1.5rem auto !important;
+    position: relative !important;
+}
+
+.ui-btn-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ui-accent-blue);
+    color: white !important;
+    border-radius: 9999px;
+    padding: 2px 12px;
+    font-size: 0.85em;
+    font-weight: 700;
+    vertical-align: middle;
+    margin: 0 4px;
+    line-height: 1.2;
+    text-decoration: none !important;
+}
+
+.ui-btn-inline.success {
+    background: var(--ui-accent-green);
+}
+
+/* Theme Awareness - Sync with Docsify or manual theme if implemented */
+[data-theme="dark"],
+.dark-theme,
+body[data-theme="dark"] {
+    --ui-bg-primary: #16181C;
+    --ui-bg-secondary: #000000;
+    --ui-border-color: #2F3336;
+    --ui-text-primary: #E7E9EA;
+    --ui-text-secondary: #71767B;
+}
+
+[data-theme="dark"] .ui-input,
+body[data-theme="dark"] .ui-input {
+    background: #16181C !important;
+    border-color: #2F3336 !important;
+    color: #E7E9EA !important;
+}
+
+[data-theme="dark"] .ui-auth-card,
+body[data-theme="dark"] .ui-auth-card {
+    background: #16181C !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .ui-auth-header p,
+body[data-theme="dark"] .ui-auth-header p,
+[data-theme="dark"] .ui-auth-footer,
+body[data-theme="dark"] .ui-auth-footer {
+    color: #71767B !important;
+}
+
+/* Button Mocks */
+.ui-btn-mock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    border: none;
+    cursor: default;
+    user-select: none;
+    vertical-align: middle;
+    margin: 0 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-decoration: none !important;
+}
+
+.ui-btn-primary {
+    background: var(--ui-accent-blue);
+    color: #FFFFFF !important;
+}
+
+.ui-btn-success {
+    background: var(--ui-accent-green);
+    color: #FFFFFF !important;
+}
+
+.ui-btn-mock svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Icon Mocks (like menu-bar icons) */
+.ui-icon-mock {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 50% !important;
+    color: var(--ui-accent-blue) !important;
+    background: transparent !important;
+    vertical-align: middle !important;
+    transition: background-color 0.2s;
+    overflow: hidden !important;
+}
+
+.ui-icon-mock svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    display: block !important;
+}
+
+/* Large Icon version for standalone display */
+.ui-icon-mock.large {
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    min-height: 64px !important;
+}
+
+.ui-icon-mock.large svg {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+}
+
+/* Hover effects (optional, for interactive manuals) */
+.ui-btn-mock:hover {
+    filter: brightness(0.9);
+}
+
+.ui-btn-auth:hover {
+    filter: brightness(0.9);
+}
+
+[data-theme="dark"] .ui-btn-auth[style*="background: #eff3f4"],
+body[data-theme="dark"] .ui-btn-auth[style*="background: #eff3f4"] {
+    background: #2F3336 !important;
+    color: #E7E9EA !important;
+}
+
+/* Authentication Card & Form Mockups */
+.ui-auth-mock-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: var(--ui-bg-primary);
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.ui-auth-card {
+    width: 420px;
+    background: var(--ui-bg-primary);
+    border: 1px solid var(--ui-border-color);
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ui-auth-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.ui-brand-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--ui-accent-blue);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.ui-auth-header h1 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 4px 0 !important;
+    color: var(--ui-text-primary) !important;
+    line-height: 1.4 !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.ui-auth-header p {
+    color: #536471 !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5 !important;
+}
+
+.ui-form-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ui-form-group label {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: var(--ui-text-primary) !important;
+    margin: 0 0 6px 0 !important;
+    display: block !important;
+}
+
+.ui-form-group .ui-input {
+    width: 100%;
+    padding: 8px 14px;
+    border: 1px solid var(--ui-border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: var(--ui-bg-primary);
+    color: #0F1419;
+    pointer-events: none;
+}
+
+.ui-btn-auth {
+    width: 100%;
+    padding: 10px;
+    background: var(--ui-accent-blue);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* Password Strength Indicator Mockup */
+.ui-password-strength {
+    width: 100%;
+    height: 4px;
+    background: var(--ui-border-color);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.ui-strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.ui-strength-bar.weak {
+    width: 25%;
+    background: var(--ui-accent-red);
+}
+
+.ui-strength-bar.fair {
+    width: 50%;
+    background: #FFC107;
+}
+
+.ui-strength-bar.good {
+    width: 75%;
+    background: var(--ui-accent-blue);
+}
+
+.ui-strength-bar.strong {
+    width: 100%;
+    background: var(--ui-accent-green);
+}
+
+.ui-form-hint {
+    font-size: 0.8rem;
+    color: var(--ui-text-secondary);
+    margin-top: 4px;
+}
+
+.ui-btn-success-auth {
+    background: var(--ui-accent-green);
+}
+
+.ui-auth-footer {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ui-border-color);
+    font-size: 0.85rem;
+    color: #536471;
+}
+
+.ui-auth-footer .link {
+    color: var(--ui-accent-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Badge for success state */
+.ui-status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(0, 186, 124, 0.1);
+    color: var(--ui-accent-green);
+    margin: 8px 0;
+}
+
+[data-theme="dark"] .ui-status-badge,
+body[data-theme="dark"] .ui-status-badge {
+    background: rgba(0, 186, 124, 0.2);
+    color: #44cf96;
+}
+
+/* Dashboard Mockups */
+.ui-file-list-mock {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    background: var(--ui-bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--ui-border-color);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ui-file-item-mock {
+    background: var(--ui-bg-primary);
+    border: 1px solid var(--ui-border-color);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.ui-file-info-mock {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ui-file-icon-mock {
+    width: 40px;
+    height: 40px;
+    background: var(--ui-accent-blue);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.ui-file-details-mock h4 {
+    font-size: 0.95rem;
+    margin: 0;
+    font-weight: 700;
+    color: var(--ui-text-primary);
+}
+
+.ui-file-details-mock .ui-file-size {
+    font-size: 0.8rem;
+    color: #536471;
+}
+
+.ui-status-badge-mock {
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.ui-status-uploaded-mock {
+    background: rgba(29, 155, 240, 0.1);
+    color: var(--ui-accent-blue);
+}
+
+.ui-status-signed-mock {
+    background: rgba(0, 186, 124, 0.1);
+    color: var(--ui-accent-green);
+}
+
+.ui-file-actions-mock {
+    display: flex;
+    gap: 8px;
+}
+
+.ui-btn-tiny-mock {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Upload Drop Zone Mockup */
+.ui-drop-zone-mock {
+    background: var(--ui-bg-secondary);
+    border: 1px solid var(--ui-border-color);
+    border-radius: 12px;
+    padding: 48px 24px;
+    text-align: center;
+    cursor: default;
+    margin: 24px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.ui-drop-zone-mock svg {
+    width: 44px;
+    height: 44px;
+    color: var(--ui-accent-blue);
+    margin-bottom: 20px;
+    stroke-width: 1.5;
+}
+
+.ui-drop-zone-mock h2 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 8px 0 !important;
+    color: var(--ui-text-primary) !important;
+    border: none !important;
+}
+
+.ui-drop-zone-mock p {
+    font-size: 0.9rem !important;
+    color: var(--ui-text-secondary) !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.ui-drop-zone-formats {
+    font-size: 0.85rem;
+    color: var(--ui-text-secondary);
+    margin-top: 16px;
+    word-break: break-all;
+    line-height: 1.4;
+}
+
+/* Menu Bar Mockups */
+.ui-menu-bar-mock {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ui-bg-secondary);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    border: 1px solid var(--ui-border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 48px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.ui-menu-info-mock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    color: var(--ui-text-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.ui-menu-timer-mock {
+    font-family: 'Courier New', monospace;
+    background-color: var(--ui-bg-primary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--ui-border-color);
+    color: var(--ui-accent-blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.ui-menu-divider-mock {
+    width: 1px;
+    height: 20px;
+    background-color: var(--ui-border-color);
+    margin: 0 4px;
+}
+
+.ui-menu-item-mock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #536471;
+    transition: all 0.2s;
+}
+
+.ui-menu-item-mock.active {
+    color: var(--ui-accent-blue);
+    background: rgba(29, 155, 240, 0.1);
+}
+
+.ui-menu-item-mock svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Download Modal Mockup */
+.ui-modal-mock-container {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.ui-modal-mock {
+    background: var(--ui-bg-primary);
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--ui-border-color);
+}
+
+.ui-modal-header-mock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ui-modal-header-mock h2 {
+    margin: 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    color: var(--ui-text-primary) !important;
+    border: none !important;
+}
+
+.ui-modal-close-mock {
+    font-size: 1.5rem;
+    color: #536471;
+    line-height: 1;
+}
+
+.ui-download-item-mock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 2px solid var(--ui-border-color);
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.ui-download-info-mock h3 {
+    margin: 0 0 4px 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: var(--ui-text-primary) !important;
+    border: none !important;
+}
+
+.ui-download-info-mock p {
+    margin: 0 !important;
+    font-size: 0.85rem !important;
+    color: #536471 !important;
+}
+
+/* Administrative Mockup Styles */
+.ui-admin-card {
+    background: var(--ui-bg-primary);
+    border: 1px solid var(--ui-border-color);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.ui-admin-header {
+    background: var(--ui-bg-secondary);
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--ui-border-color);
+}
+
+.ui-admin-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--ui-text-primary);
+}
+
+.ui-admin-section {
+    padding: 20px;
+    border-bottom: 1px solid var(--ui-border-color);
+}
+
+.ui-admin-section:last-child {
+    border-bottom: none;
+}
+
+.ui-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ui-text-primary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ui-badge-count {
+    background: var(--ui-accent-blue);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+
+.ui-user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ui-user-card {
+    background: var(--ui-bg-secondary);
+    border: 1px solid var(--ui-border-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ui-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ui-user-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.ui-user-name {
+    font-weight: 700;
+    color: var(--ui-text-primary);
+}
+
+.ui-user-email {
+    font-size: 0.85rem;
+    color: var(--ui-text-secondary);
+}
+
+.ui-status-badge {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.ui-status-pending {
+    background: #FFD700;
+    color: #000;
+}
+
+.ui-status-active {
+    background: var(--ui-accent-green);
+    color: #fff;
+}
+
+.ui-status-locked {
+    background: var(--ui-accent-red);
+    color: #fff;
+}
+
+.ui-role-badge {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ui-role-admin {
+    background: #8B5CF6;
+}
+
+.ui-role-user {
+    background: #9CA3AF;
+}
+
+.ui-user-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.ui-btn-admin {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: default;
+    transition: transform 0.1s;
+}
+
+.ui-btn-approve {
+    background: var(--ui-accent-blue);
+    color: #fff;
+}
+
+.ui-btn-delete {
+    background: transparent;
+    border: 1px solid var(--ui-border-color);
+    color: var(--ui-text-primary);
+}
+
+.ui-btn-disable {
+    background: var(--ui-accent-red);
+    color: #fff;
+}
+
+.ui-btn-unlock {
+    background: #F59E0B;
+    color: #fff;
+}
+
+/* UI Mockup Container - Protects layout in docs */
+.ui-mockup-container {
+    padding: 1rem 0 !important;
+    display: block !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+}
+
+/* Admin Menu Dropdown Mockup (Bulletproof Version) */
+.ui-dropdown-mock {
+    background: #16181C !important;
+    border: 1px solid #2F3336 !important;
+    border-radius: 12px !important;
+    width: 260px !important;
+    padding: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    margin: 10px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    backdrop-filter: blur(8px) !important;
+    position: relative !important;
+}
+
+.ui-dropdown-header {
+    padding: 12px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: #1C1F23 !important;
+    border-bottom: 1px solid #2F3336 !important;
+    border-radius: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.ui-avatar-mock {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #1D9BF0 !important;
+    flex-shrink: 0 !important;
+}
+
+.ui-dropdown-mock svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    stroke-width: 2 !important;
+}
+
+.ui-avatar-mock svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.ui-user-details-mock {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.ui-username-mock {
+    color: #E7E9EA !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    line-height: 1.2 !important;
+}
+
+.ui-role-tag-mock {
+    font-size: 11px !important;
+    color: #F4212E !important;
+    background: rgba(244, 33, 46, 0.1) !important;
+    border: 1px solid rgba(244, 33, 46, 0.4) !important;
+    padding: 1px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 800 !important;
+    width: fit-content !important;
+    margin-top: 2px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+}
+
+.ui-dropdown-item-mock {
+    padding: 10px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    color: #E7E9EA !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: default !important;
+    border-radius: 8px !important;
+    transition: background-color 0.2s !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+}
+
+.ui-dropdown-item-mock:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.ui-dropdown-item-mock svg {
+    color: #71767B !important;
+}
+
+.ui-dropdown-item-mock.logout {
+    color: #F4212E !important;
+}
+
+.ui-dropdown-item-mock.logout svg {
+    color: #F4212E !important;
+}
+
+.ui-dropdown-divider {
+    height: 1px !important;
+    background: #2F3336 !important;
+    margin: 6px 0 !important;
+}/ *    
+   *   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
+   *     M i g r a t e d   C S S   f r o m   T e m p l a t e s  
+   *   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
+   *     T h e s e   s t y l e s   w e r e   p r e v i o u s l y   h a r d c o d e d   i n   l a y o u t _ r e p o r t . h t m l   a n d   l a y o u t _ m o d e r n . h t m l .  
+   *     T h e y   h a v e   b e e n   c l e a n e d   u p   ( r e m o v e d   ! i m p o r t a n t   w h e r e   s a f e l y   p o s s i b l e )   a n d   c o n s o l i d a t e d   h e r e .  
+   * /  
+  
+ / *   U I   M o c k u p   C o n t a i n e r   -   P r o t e c t s   l a y o u t   i n   d o c s   * /  
+ . u i - m o c k u p - c o n t a i n e r   {  
+         p a d d i n g :   1 r e m   0 ;  
+         d i s p l a y :   b l o c k ;  
+         w i d t h :   f i t - c o n t e n t ;  
+         m a x - w i d t h :   1 0 0 % ;  
+ }  
+  
+ / *   A d m i n   M e n u   D r o p d o w n   M o c k u p   * /  
+ . u i - d r o p d o w n - m o c k   {  
+         b a c k g r o u n d :   # 1 6 1 8 1 C ;  
+         b o r d e r :   1 p x   s o l i d   # 2 F 3 3 3 6 ;  
+         b o r d e r - r a d i u s :   1 2 p x ;  
+         w i d t h :   2 6 0 p x ;  
+         p a d d i n g :   8 p x ;  
+         b o x - s h a d o w :   0   1 0 p x   3 0 p x   r g b a ( 0 ,   0 ,   0 ,   0 . 5 ) ;  
+         f o n t - f a m i l y :   - a p p l e - s y s t e m ,   B l i n k M a c S y s t e m F o n t ,   ' S e g o e   U I ' ,   R o b o t o ,   s a n s - s e r i f ;  
+         m a r g i n :   1 0 p x   0 ;  
+         d i s p l a y :   f l e x ;  
+         f l e x - d i r e c t i o n :   c o l u m n ;  
+         o v e r f l o w :   h i d d e n ;  
+         b a c k d r o p - f i l t e r :   b l u r ( 8 p x ) ;  
+         p o s i t i o n :   r e l a t i v e ;  
+ }  
+  
+ . u i - d r o p d o w n - h e a d e r   {  
+         p a d d i n g :   1 2 p x   1 6 p x ;  
+         d i s p l a y :   f l e x ;  
+         a l i g n - i t e m s :   c e n t e r ;  
+         g a p :   1 2 p x ;  
+         b a c k g r o u n d :   # 1 C 1 F 2 3 ;  
+         b o r d e r - b o t t o m :   1 p x   s o l i d   # 2 F 3 3 3 6 ;  
+         b o r d e r - r a d i u s :   8 p x ;  
+         m a r g i n - b o t t o m :   8 p x ;  
+ }  
+  
+ . u i - a v a t a r - m o c k   {  
+         w i d t h :   3 6 p x ;  
+         h e i g h t :   3 6 p x ;  
+         b o r d e r - r a d i u s :   5 0 % ;  
+         b a c k g r o u n d :   r g b a ( 2 5 5 ,   2 5 5 ,   2 5 5 ,   0 . 1 ) ;  
+         d i s p l a y :   f l e x ;  
+         a l i g n - i t e m s :   c e n t e r ;  
+         j u s t i f y - c o n t e n t :   c e n t e r ;  
+         c o l o r :   # 1 D 9 B F 0 ;  
+         f l e x - s h r i n k :   0 ;  
+ }  
+  
+ . u i - d r o p d o w n - m o c k   s v g   {  
+         w i d t h :   1 8 p x ;  
+         h e i g h t :   1 8 p x ;  
+         m i n - w i d t h :   1 8 p x ;  
+         m i n - h e i g h t :   1 8 p x ;  
+         m a x - w i d t h :   2 0 p x ;  
+         m a x - h e i g h t :   2 0 p x ;  
+         f l e x - s h r i n k :   0 ;  
+         d i s p l a y :   i n l i n e - b l o c k ;  
+         m a r g i n :   0 ;  
+         p a d d i n g :   0 ;  
+         s t r o k e - w i d t h :   2 ;  
+ }  
+  
+ . u i - a v a t a r - m o c k   s v g   {  
+         w i d t h :   2 0 p x ;  
+         h e i g h t :   2 0 p x ;  
+ }  
+  
+ . u i - u s e r - d e t a i l s - m o c k   {  
+         d i s p l a y :   f l e x ;  
+         f l e x - d i r e c t i o n :   c o l u m n ;  
+         j u s t i f y - c o n t e n t :   c e n t e r ;  
+         o v e r f l o w :   h i d d e n ;  
+ }  
+  
+ . u i - u s e r n a m e - m o c k   {  
+         c o l o r :   # E 7 E 9 E A ;  
+         f o n t - w e i g h t :   7 0 0 ;  
+         f o n t - s i z e :   0 . 9 5 r e m ;  
+         w h i t e - s p a c e :   n o w r a p ;  
+         t e x t - o v e r f l o w :   e l l i p s i s ;  
+         o v e r f l o w :   h i d d e n ;  
+         l i n e - h e i g h t :   1 . 2 ;  
+ }  
+  
+ . u i - r o l e - t a g - m o c k   {  
+         f o n t - s i z e :   1 1 p x ;  
+         c o l o r :   # F 4 2 1 2 E ;  
+         b a c k g r o u n d :   r g b a ( 2 4 4 ,   3 3 ,   4 6 ,   0 . 1 ) ;  
+         b o r d e r :   1 p x   s o l i d   r g b a ( 2 4 4 ,   3 3 ,   4 6 ,   0 . 4 ) ;  
+         p a d d i n g :   1 p x   6 p x ;  
+         b o r d e r - r a d i u s :   4 p x ;  
+         f o n t - w e i g h t :   8 0 0 ;  
+         w i d t h :   f i t - c o n t e n t ;  
+         m a r g i n - t o p :   2 p x ;  
+         t e x t - t r a n s f o r m :   u p p e r c a s e ;  
+         l e t t e r - s p a c i n g :   0 . 0 2 e m ;  
+ }  
+  
+ . u i - d r o p d o w n - i t e m - m o c k   {  
+         p a d d i n g :   1 0 p x   1 6 p x ;  
+         d i s p l a y :   f l e x ;  
+         a l i g n - i t e m s :   c e n t e r ;  
+         g a p :   1 2 p x ;  
+         c o l o r :   # E 7 E 9 E A ;  
+         f o n t - s i z e :   1 4 p x ;  
+         f o n t - w e i g h t :   5 0 0 ;  
+         c u r s o r :   d e f a u l t ;  
+         b o r d e r - r a d i u s :   8 p x ;  
+         t r a n s i t i o n :   b a c k g r o u n d - c o l o r   0 . 2 s ;  
+         w h i t e - s p a c e :   n o w r a p ;  
+         l i n e - h e i g h t :   1 ;  
+ }  
+  
+ . u i - d r o p d o w n - i t e m - m o c k : h o v e r   {  
+         b a c k g r o u n d - c o l o r :   r g b a ( 2 5 5 ,   2 5 5 ,   2 5 5 ,   0 . 0 5 ) ;  
+ }  
+  
+ . u i - d r o p d o w n - i t e m - m o c k   s v g   {  
+         c o l o r :   # 7 1 7 6 7 B ;  
+ }  
+  
+ . u i - d r o p d o w n - i t e m - m o c k . l o g o u t   {  
+         c o l o r :   # F 4 2 1 2 E ;  
+ }  
+  
+ . u i - d r o p d o w n - i t e m - m o c k . l o g o u t   s v g   {  
+         c o l o r :   # F 4 2 1 2 E ;  
+ }  
+  
+ . u i - d r o p d o w n - d i v i d e r   {  
+         h e i g h t :   1 p x ;  
+         b a c k g r o u n d :   # 2 F 3 3 3 6 ;  
+         m a r g i n :   6 p x   0 ;  
+ }  
+  
+ / *   I c o n   M o c k s   -   H i g h l y   S p e c i f i c   ( R e - e n f o r c e d )   * /  
+ . u i - i c o n - m o c k   {  
+         d i s p l a y :   i n l i n e - f l e x   ! i m p o r t a n t ;  
+         a l i g n - i t e m s :   c e n t e r   ! i m p o r t a n t ;  
+         j u s t i f y - c o n t e n t :   c e n t e r   ! i m p o r t a n t ;  
+         w i d t h :   3 2 p x   ! i m p o r t a n t ;  
+         h e i g h t :   3 2 p x   ! i m p o r t a n t ;  
+         m i n - w i d t h :   3 2 p x   ! i m p o r t a n t ;  
+         m i n - h e i g h t :   3 2 p x   ! i m p o r t a n t ;  
+         b o r d e r - r a d i u s :   5 0 %   ! i m p o r t a n t ;  
+         v e r t i c a l - a l i g n :   m i d d l e   ! i m p o r t a n t ;  
+         o v e r f l o w :   h i d d e n   ! i m p o r t a n t ;  
+ }  
+  
+ . u i - i c o n - m o c k   s v g   {  
+         w i d t h :   2 0 p x   ! i m p o r t a n t ;  
+         h e i g h t :   2 0 p x   ! i m p o r t a n t ;  
+         m i n - w i d t h :   2 0 p x   ! i m p o r t a n t ;  
+         m i n - h e i g h t :   2 0 p x   ! i m p o r t a n t ;  
+         m a x - w i d t h :   2 0 p x   ! i m p o r t a n t ;  
+         m a x - h e i g h t :   2 0 p x   ! i m p o r t a n t ;  
+         d i s p l a y :   b l o c k   ! i m p o r t a n t ;  
+ }  
+  
+ . u i - i c o n - m o c k . l a r g e   {  
+         w i d t h :   6 4 p x   ! i m p o r t a n t ;  
+         h e i g h t :   6 4 p x   ! i m p o r t a n t ;  
+         m i n - w i d t h :   6 4 p x   ! i m p o r t a n t ;  
+         m i n - h e i g h t :   6 4 p x   ! i m p o r t a n t ;  
+ }  
+  
+ . u i - i c o n - m o c k . l a r g e   s v g   {  
+         w i d t h :   4 8 p x   ! i m p o r t a n t ;  
+         h e i g h t :   4 8 p x   ! i m p o r t a n t ;  
+         m i n - w i d t h :   4 8 p x   ! i m p o r t a n t ;  
+         m i n - h e i g h t :   4 8 p x   ! i m p o r t a n t ;  
+ }  
+ / *   D o c s i f y   A l e r t s   ( M o d e r n   I c o n   S t y l e )   * /  
+ . a l e r t   {  
+         p a d d i n g :   1 6 p x ;  
+         b o r d e r - r a d i u s :   8 p x ;  
+         m a r g i n :   2 0 p x   0 ;  
+         b o r d e r :   1 p x   s o l i d   t r a n s p a r e n t ;  
+         d i s p l a y :   f l e x ;  
+         f l e x - d i r e c t i o n :   r o w ;  
+         a l i g n - i t e m s :   f l e x - s t a r t ;  
+ }  
+  
+ . a l e r t - i c o n   {  
+         f l e x :   0   0   2 4 p x ;  
+         m a r g i n - r i g h t :   1 2 p x ;  
+         f o n t - s i z e :   1 . 2 r e m ;  
+         d i s p l a y :   f l e x ;  
+         a l i g n - i t e m s :   c e n t e r ;  
+         j u s t i f y - c o n t e n t :   c e n t e r ;  
+         m a r g i n - t o p :   2 p x ;  
+ }  
+  
+ . a l e r t - c o n t e n t   {  
+         f l e x :   1 ;  
+ }  
+  
+ . a l e r t   p   {  
+         m a r g i n :   0 ;  
+ }  
+  
+ . a l e r t   s t r o n g   {  
+         d i s p l a y :   b l o c k ;  
+         m a r g i n - b o t t o m :   5 p x ;  
+ }  
+  
+ / *   I m p o r t a n t   ( ! > )   * /  
+ . a l e r t - i m p o r t a n t   {  
+         b a c k g r o u n d - c o l o r :   # f e f 2 f 2 ;  
+         b o r d e r - c o l o r :   # f e c a c a ;  
+         c o l o r :   # 9 9 1 b 1 b ;  
+         b o r d e r - l e f t :   4 p x   s o l i d   # e f 4 4 4 4 ;  
+ }  
+  
+ . a l e r t - i m p o r t a n t   . a l e r t - i c o n   {  
+         c o l o r :   # e f 4 4 4 4 ;  
+ }  
+  
+ / *   S t r o n g e r   B o l d   T e x t   i n   A l e r t s   * /  
+ . a l e r t   s t r o n g ,  
+ . a l e r t   b   {  
+         f o n t - w e i g h t :   7 0 0 ;  
+         c o l o r :   # 0 f 1 7 2 a ;  
+ }  
+  
+ / *   M o d e r n   T i t l e / B o d y   s p l i t   s t y l e s   ( i n j e c t e d   b y   J S )   * /  
+ . a l e r t - t i t l e   {  
+         f o n t - w e i g h t :   8 0 0 ;  
+         f o n t - s i z e :   1 r e m ;  
+         m a r g i n - b o t t o m :   6 p x ;  
+         l e t t e r - s p a c i n g :   - 0 . 0 1 e m ;  
+ }  
+  
+ . a l e r t - b o d y   {  
+         f o n t - s i z e :   0 . 9 5 r e m ;  
+         l i n e - h e i g h t :   1 . 6 ;  
+         c o l o r :   # 3 3 4 1 5 5 ;  
+ }  
+  
+ / *   T i p   ( ? > )   * /  
+ . a l e r t - t i p   {  
+         b a c k g r o u n d - c o l o r :   # e f f 6 f f ;  
+         b o r d e r - c o l o r :   # b f d b f e ;  
+         c o l o r :   # 1 e 4 0 a f ;  
+         b o r d e r - l e f t :   4 p x   s o l i d   # 3 b 8 2 f 6 ;  
+ }  
+  
+ . a l e r t - t i p   . a l e r t - i c o n   {  
+         c o l o r :   # 3 b 8 2 f 6 ;  
+ }  
+ 

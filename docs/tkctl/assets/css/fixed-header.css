@@ -1,0 +1,117 @@
+/* [v3.6.1] tkadmin Docsify Fixed Header System */
+
+:root,
+.light-theme,
+[data-theme='light'] {
+    --app-header-bg: #ffffff !important;
+    --app-sidebar-bg: #fafafa !important;
+    --app-text: #1f2328 !important;
+    --app-border: #e3e6ed !important;
+}
+
+.dark-theme,
+.dark,
+[data-theme='dark'] {
+    --app-header-bg: #1f2328 !important;
+    --app-sidebar-bg: #0d1117 !important;
+    --app-text: #c9d1d9 !important;
+    --app-border: #30363d !important;
+}
+
+/* 헤더 절대 고정 (Top of Everything) */
+body>header.app-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 64px !important;
+    background-color: var(--app-header-bg) !important;
+    border-bottom: 1px solid var(--app-border) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    padding: 0 24px !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body>header.app-header .unified-toggle {
+    margin-right: 12px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+}
+
+body>header.app-header .logo {
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 24px !important;
+    flex-shrink: 0 !important;
+}
+
+body>header.app-header .unified-search {
+    display: flex !important;
+    align-items: center !important;
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+}
+
+body>header.app-header .theme-toggle {
+    margin-left: 24px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+}
+
+/* 버튼 스타일 */
+header.app-header button.icon-btn {
+    width: 40px !important;
+    height: 40px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: var(--app-text) !important;
+}
+
+header.app-header button.icon-btn:hover {
+    background-color: rgba(128, 128, 128, 0.1) !important;
+}
+
+/* 검색창 스타일 */
+header.app-header .unified-search input {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: 38px !important;
+    background-color: #f6f8fa !important;
+    color: #1f2328 !important;
+    border: 1px solid #e3e6ed !important;
+    border-radius: 6px !important;
+    padding: 0 12px !important;
+    font-size: 13px !important;
+}
+
+.dark-theme header.app-header .unified-search input,
+[data-theme='dark'] header.app-header .unified-search input {
+    background-color: #161b22 !important;
+    color: #c9d1d9 !important;
+    border-color: #30363d !important;
+}
+
+/* Docsify 레이아웃 조정 */
+section.sidebar {
+    top: 64px !important;
+    height: calc(100% - 64px) !important;
+    z-index: 9000 !important;
+}
+
+main {
+    padding-top: 64px !important;
+}
+
+.sidebar-toggle {
+    display: none !important;
+}

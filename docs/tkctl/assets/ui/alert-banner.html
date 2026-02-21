@@ -1,0 +1,164 @@
+<!-- ============================================================
+     tkadmin 장애 알림 배너 목업
+     상단 고정 배너 + 알림 뱃지 + 상세 알림 카드
+     Phoenix UI 다크 테마 / Glassmorphism 스타일
+     ============================================================ -->
+<div class="mockup-container" style="padding: 0 !important; overflow: hidden !important;">
+
+    <!-- 상단 고정 장애 배너 (빨간 배경) -->
+    <div style="
+        background: linear-gradient(90deg, #f85149 0%, #da3633 100%);
+        color: #ffffff;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: var(--mockup-font);
+        font-size: 0.9rem;
+        font-weight: 600;
+    ">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <!-- 경고 아이콘 -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>TachyonNAC 서비스 장애 감지 - 자동 복구를 시도 중입니다</span>
+            <span style="
+                font-size: 0.75rem;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-weight: 500;
+            ">2025-02-14 15:32:08</span>
+        </div>
+
+        <!-- 닫기 버튼 -->
+        <button style="
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+            font-size: 1rem;
+        ">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- 알림 뱃지 아이콘 + 알림 목록 -->
+    <div style="padding: 20px;">
+
+        <!-- 알림 아이콘 영역 (Topbar 미리보기) -->
+        <div style="
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding: 12px 16px;
+            background: var(--mockup-bg-secondary);
+            border: 1px solid var(--mockup-border-color);
+            border-radius: var(--mockup-radius-sm);
+        ">
+            <div style="font-size: 0.85rem; color: var(--mockup-text-secondary); font-weight: 600;">
+                알림 아이콘 예시:
+            </div>
+            <!-- 벨 아이콘 + 뱃지 -->
+            <div style="position: relative; display: inline-flex;">
+                <div style="
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background: var(--mockup-bg-tertiary);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--mockup-text-secondary);
+                ">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 01-3.46 0"/>
+                    </svg>
+                </div>
+                <span class="mockup-badge-count" style="
+                    position: absolute;
+                    top: -4px;
+                    right: -4px;
+                ">3</span>
+            </div>
+        </div>
+
+        <!-- 최근 알림 목록 카드 -->
+        <div class="mockup-card" style="padding: 0 !important; overflow: hidden !important;">
+            <div style="
+                padding: 14px 18px;
+                border-bottom: 1px solid var(--mockup-border-color);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            ">
+                <span style="font-weight: 700; font-size: 0.95rem; color: var(--mockup-text-primary);">최근 알림</span>
+                <span style="font-size: 0.8rem; color: var(--mockup-accent); font-weight: 600; cursor: default;">
+                    모두 읽음 처리
+                </span>
+            </div>
+
+            <!-- 알림 항목 1: 장애 (미읽음) -->
+            <div style="
+                padding: 12px 18px;
+                border-bottom: 1px solid var(--mockup-border-color);
+                background: rgba(248, 81, 73, 0.04);
+            ">
+                <div style="font-size: 0.75rem; color: var(--mockup-text-muted); margin-bottom: 4px;">
+                    2025-02-14 15:32:08
+                </div>
+                <div style="font-size: 0.85rem; line-height: 1.4;">
+                    <span style="color: var(--mockup-danger); font-weight: 600;">FAILURE</span>
+                    <span style="color: var(--mockup-text-primary);">
+                        TachyonNAC 서비스가 비정상 종료되었습니다. 자동 복구를 시도합니다.
+                    </span>
+                </div>
+            </div>
+
+            <!-- 알림 항목 2: 복구 성공 -->
+            <div style="
+                padding: 12px 18px;
+                border-bottom: 1px solid var(--mockup-border-color);
+            ">
+                <div style="font-size: 0.75rem; color: var(--mockup-text-muted); margin-bottom: 4px;">
+                    2025-02-14 15:30:45
+                </div>
+                <div style="font-size: 0.85rem; line-height: 1.4;">
+                    <span style="color: var(--mockup-success); font-weight: 600;">RECOVERY_SUCCESS</span>
+                    <span style="color: var(--mockup-text-primary);">
+                        TachyonPMS 서비스가 정상적으로 복구되었습니다.
+                    </span>
+                </div>
+            </div>
+
+            <!-- 알림 항목 3: 복구 실패 -->
+            <div style="
+                padding: 12px 18px;
+            ">
+                <div style="font-size: 0.75rem; color: var(--mockup-text-muted); margin-bottom: 4px;">
+                    2025-02-14 15:28:12
+                </div>
+                <div style="font-size: 0.85rem; line-height: 1.4;">
+                    <span style="color: var(--mockup-warning); font-weight: 600;">RECOVERY_FAILED</span>
+                    <span style="color: var(--mockup-text-primary);">
+                        TachyonNAC 서비스 복구에 실패했습니다. 수동 개입이 필요합니다.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

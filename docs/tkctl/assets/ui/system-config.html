@@ -1,0 +1,249 @@
+<div class="ui-mockup-wrapper">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        .ui-mockup-wrapper {
+            padding: 24px;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #F0F2F5;
+            border-radius: 16px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        /* Top Bar / Header */
+        .ui-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .ui-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ui-title-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1D1F23;
+        }
+
+        .ui-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1D1F23;
+            margin: 0;
+        }
+
+        /* Config Card */
+        .ui-config-container {
+            background: #FFFFFF;
+            border: 1px solid #E1E8ED;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ui-config-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .ui-config-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ui-group-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #536471;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid #F0F2F5;
+            padding-bottom: 8px;
+        }
+
+        .ui-config-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .ui-config-label {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex: 1;
+        }
+
+        .ui-label-text {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1D1F23;
+        }
+
+        .ui-label-desc {
+            font-size: 12.5px;
+            color: #536471;
+        }
+
+        .ui-config-input {
+            width: 180px;
+            padding: 10px 14px;
+            border: 1px solid #EFF3F4;
+            border-radius: 10px;
+            font-size: 14px;
+            background: #F8F9FA;
+            color: #1D1F23;
+            outline: none;
+            font-weight: 500;
+        }
+
+        .ui-config-input:focus {
+            border-color: #1D9BF0;
+            background: #FFF;
+        }
+
+        /* Footer */
+        .ui-config-footer {
+            padding: 16px 24px;
+            background: #F8F9FA;
+            border-top: 1px solid #EFF3F4;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .ui-btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .ui-btn-save {
+            background: #1D9BF0;
+            color: #FFF;
+        }
+
+        .ui-btn-restart {
+            background: #F4212E;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] .ui-mockup-wrapper {
+            background: #000;
+        }
+
+        [data-theme="dark"] .ui-config-container {
+            background: #16181C;
+            border-color: #2F3336;
+        }
+
+        [data-theme="dark"] .ui-title {
+            color: #E7E9EA;
+        }
+
+        [data-theme="dark"] .ui-group-title {
+            color: #71767B;
+            border-bottom-color: #2F3336;
+        }
+
+        [data-theme="dark"] .ui-label-text {
+            color: #E7E9EA;
+        }
+
+        [data-theme="dark"] .ui-label-desc {
+            color: #71767B;
+        }
+
+        [data-theme="dark"] .ui-config-input {
+            background: #000;
+            border-color: #2F3336;
+            color: #E7E9EA;
+        }
+
+        [data-theme="dark"] .ui-config-footer {
+            background: #1C1F23;
+            border-top-color: #2F3336;
+        }
+    </style>
+
+    <div class="ui-header-bar">
+        <div class="ui-title-group">
+            <div class="ui-title-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 1v6m0 6v6m6-12h6m-18 0H1m18-6l-4.5 4.5m-3 3L7 19m12-14l-4.5 4.5m-3 3L7 19" />
+                </svg>
+            </div>
+            <h1 class="ui-title">시스템 설정</h1>
+        </div>
+    </div>
+
+    <div class="ui-config-container">
+        <div class="ui-config-body">
+            <div class="ui-config-group">
+                <div class="ui-group-title">General</div>
+                <div class="ui-config-row">
+                    <div class="ui-config-label">
+                        <span class="ui-label-text">Service Port</span>
+                        <span class="ui-label-desc">웹 서버 및 API 서비스가 사용할 포트입니다.</span>
+                    </div>
+                    <input type="text" class="ui-config-input" value="8080">
+                </div>
+            </div>
+
+            <div class="ui-config-group">
+                <div class="ui-group-title">Security</div>
+                <div class="ui-config-row">
+                    <div class="ui-config-label">
+                        <span class="ui-label-text">Session Expiry</span>
+                        <span class="ui-label-desc">로그인 세션 유지 시간 (시간 단위)</span>
+                    </div>
+                    <input type="number" class="ui-config-input" value="12">
+                </div>
+                <div class="ui-config-row">
+                    <div class="ui-config-label">
+                        <span class="ui-label-text">Max Login Attempts</span>
+                        <span class="ui-label-desc">계정 잠금 전 허용되는 최대 로그인 실패 횟수</span>
+                    </div>
+                    <input type="number" class="ui-config-input" value="5">
+                </div>
+            </div>
+        </div>
+        <div class="ui-config-footer">
+            <button class="ui-btn ui-btn-restart">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M23 4v6h-6M1 20v-6h6" />
+                    <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" />
+                </svg>
+                Restart Server
+            </button>
+            <button class="ui-btn ui-btn-save">설정 저장</button>
+        </div>
+    </div>
+</div>
