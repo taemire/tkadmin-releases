@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkusers_msjang_wdata_tmp_mdx_poc_test=globalThis.webpackChunkusers_msjang_wdata_tmp_mdx_poc_test||[]).push([[742],{7093(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);
