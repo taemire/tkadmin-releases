@@ -4,8 +4,7 @@
 
 **환경 체크** 화면은 TACHYON 솔루션이 운영되는 리눅스 서버의 핵심 시스템 설정을 점검하고 조정할 수 있는 기능입니다. OS Limits, SELinux, 방화벽(Firewalld) 설정을 웹 인터페이스에서 직접 확인하고 변경할 수 있어, 터미널 접속 없이도 운영 환경을 관리할 수 있습니다.
 
-<!-- 스크린샷: 환경 체크 전체 화면 -->
-![환경 체크 화면](assets/images/user/05_env_check_overview.png)
+
 
 !> **주의**: 환경 체크 기능은 **Linux 전용** 기능입니다. Windows 개발 환경에서는 더미(Mock) 데이터가 표시되며, 실제 시스템 변경은 수행되지 않습니다.
 
@@ -31,8 +30,7 @@
 
 `/etc/security/limits.conf` 파일에 정의된 현재 시스템 리소스 제한값이 테이블 형태로 표시됩니다.
 
-<!-- 스크린샷: OS Limits 테이블 -->
-![OS Limits 설정](assets/images/user/05_env_check_limits.png)
+
 
 | 컬럼 | 설명 | 예시 |
 |------|------|------|
@@ -74,8 +72,7 @@ SELinux의 현재 실행 상태와 부팅 설정이 표시됩니다:
 - **현재 상태**: 실시간 적용 중인 SELinux 모드
 - **부팅 설정**: `/etc/selinux/config`에 설정된 부팅 시 적용 모드
 
-<!-- 스크린샷: SELinux 설정 카드 -->
-![SELinux 설정](assets/images/user/05_env_check_selinux.png)
+
 
 | 상태 | 표시 색상 | 설명 |
 |------|----------|------|
@@ -111,8 +108,7 @@ Firewalld의 활성화 여부와 현재 허용된 포트/서비스 목록이 표
 - **활성화 상태**: Firewalld 구동 여부 (초록색 체크 아이콘 또는 비활성 안내)
 - **허용 포트 목록**: 태그(Tag) 형태로 현재 열린 포트/서비스 표시
 
-<!-- 스크린샷: 방화벽 허용 정책 카드 -->
-![방화벽 설정](assets/images/user/05_env_check_firewall.png)
+
 
 ### 포트 추가
 

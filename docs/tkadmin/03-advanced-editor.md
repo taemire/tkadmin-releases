@@ -6,8 +6,7 @@
 
 tkadmin의 **자동 파일 탐색 엔진(Crawler)**이 `TargetDir` 하위 디렉토리를 스캔하여 발견한 설정 파일들을 좌측 파일 트리에 자동으로 표시하며, 운영자는 클릭 한 번으로 해당 파일을 열고 편집할 수 있습니다.
 
-<!-- 스크린샷: 전문가 편집기 전체 화면 (좌측 파일 트리 + 우측 Monaco Editor) -->
-![전문가 편집기 전체 화면](assets/images/user/03_advanced_editor_overview.png)
+
 
 ---
 
@@ -70,8 +69,7 @@ tkadmin은 `tkadmin.yml`에 정의된 `target_dir`(기본값: `/usr/local/TACHYO
 2. 선택된 파일이 강조 표시되며, 우측 **Monaco Editor**에 파일 내용이 로드됩니다.
 3. 상단 **에디터 툴바**에 현재 편집 중인 파일 경로와 **저장 (Ctrl+S)** 버튼이 표시됩니다.
 
-<!-- 스크린샷: 파일 선택 후 편집 화면 -->
-![파일 편집 화면](assets/images/user/03_advanced_editor_editing.png)
+
 
 ### 편집 기능
 
@@ -121,8 +119,7 @@ Monaco Editor는 다음과 같은 풍부한 편집 기능을 제공합니다:
    - 기록 형식: `사용자 [GUID]가 설정 파일 '경로'을(를) 수정했습니다.`
 6. 성공 알림 토스트가 표시됩니다: `설정이 저장되었습니다. (백업 생성됨)`
 
-<!-- 스크린샷: 저장 성공 토스트 메시지 -->
-![저장 성공 알림](assets/images/user/03_advanced_editor_save_success.png)
+
 
 ### YAML 구문 검증 실패 시
 
@@ -133,8 +130,7 @@ YAML 파일 저장 시 구문 오류가 발견되면:
    - 예시: `YAML 문법 오류: yaml: line 15: did not find expected key`
 3. 오류를 수정한 후 다시 저장을 시도합니다.
 
-<!-- 스크린샷: YAML 문법 오류 모달 -->
-![YAML 문법 오류](assets/images/user/03_advanced_editor_yaml_error.png)
+
 
 ---
 
