@@ -55,7 +55,7 @@ grep "REDIS" /usr/local/TACHYON/TTS40/logs/tkadmin.log
 
 **Recovery Mode 접근**
 
-TACHYON 인증 서버 자체에 장애가 있는 경우, Recovery Mode를 통해 긴급 접근할 수 있습니다. 자세한 내용은 [Recovery Mode 가이드](/admin/03-recovery-mode.md)를 참조하세요.
+TACHYON 인증 서버 자체에 장애가 있는 경우, Recovery Mode를 통해 긴급 접근할 수 있습니다. 자세한 내용은 [Recovery Mode 가이드](03-recovery-mode.md)를 참조하세요.
 
 기본 Recovery 포트: `13701` (메인 포트 + 1)
 
@@ -239,7 +239,7 @@ tkadmin의 Watchdog 엔진은 서비스가 자체적으로 설정 적용이나 �
 
 Grace Period(15초) 이후에도 서비스가 복구되지 않으면 실제 장애로 판단하여 알림이 발생합니다. 이 경우:
 
-1. 해당 서비스의 로그를 [시스템 로그](../3-features/06-log-viewer.md) 화면에서 확인합니다.
+1. 해당 서비스의 로그를 [시스템 로그](06-log-viewer.md) 화면에서 확인합니다.
 2. `journalctl -u <서비스명> -n 50 --no-pager` 명령으로 systemd 로그를 확인합니다.
 3. 서비스의 설정 파일에 문법 오류가 없는지 점검합니다.
 
