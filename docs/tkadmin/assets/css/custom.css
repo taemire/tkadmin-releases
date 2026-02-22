@@ -62,447 +62,451 @@ body {
 /* ----------------------------------------
    상단 통합 헤더 (고정 영역)
    ---------------------------------------- */
-/* [v3.5.7] 메인 페이지 디자인 완전 동기화/* [v3.5.10] 메인 페이지 디자인 완전 동기화 (Absolute Solid Fix) */
+/* [v3.5.12] 메인 페이지 디자인 완전 동기화 (Absolute Solid & Theme Fix) */
+:root,
+.light-theme,
+[data-theme='light'] {
+  --app-header-bg: #ffffff !important;
+  --app-sidebar-bg: #fafafa !important;
+  --app-text: #1f2328 !important;
+  --app-border: #e3e6ed !important;
+}
+
+.dark-theme,
+.dark,
+[data-theme='dark'] {
+  --app-header-bg: #1f2328 !important;
+  --app-sidebar-bg: #0d1117 !important;
+  --app-text: #c9d1d9 !important;
+  --app-border: #30363d !important;
+}
+
 header.app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* [v3.5.12] 메인 페이지 디자인 완전 동기화 (Absolute Solid & Theme Fix) */
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 64px !important;
+  background-color: var(--app-header-bg) !important;
+  background-image: none !important;
+  border-bottom: 1px solid var(--app-border) !important;
+  padding: 0 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  box-shadow: none !important;
+  z-index: 1000 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  color: var(--app-text) !important;
+}
 
-  /* 모든 테마 상태 정의 (강제 동기화) */
-  :root,
-  .light-theme,
-  [data-theme='light'] {
-    --app-header-bg: #ffffff !important;
-    --app-sidebar-bg: #fafafa !important;
-    --app-text: #1f2328 !important;
-    --app-border: #e3e6ed !important;
-  }
+header.app-header .unified-toggle {
+  margin-right: 8px !important;
+}
 
-  .dark-theme,
-  .dark,
-  [data-theme='dark'] {
-    --app-header-bg: #1f2328 !important;
-    --app-sidebar-bg: #0d1117 !important;
-    --app-text: #c9d1d9 !important;
-    --app-border: #30363d !important;
-  }
+header.app-header .logo {
+  display: flex !important;
+  align-items: center !important;
+  margin-right: 24px !important;
+}
 
-  header.app-header {
-    height: 64px !important;
-    background-color: var(--app-header-bg) !important;
-    background-image: none !important;
-    border-bottom: 1px solid var(--app-border) !important;
-    padding: 0 24px !important;
-    display: flex !important;
-    align-items: center !important;
-    box-shadow: none !important;
-    z-index: 1000 !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    opacity: 1 !important;
-    color: var(--app-text) !important;
-  }
+header.app-header .unified-search {
+  display: flex !important;
+  align-items: center !important;
+}
 
-  header.app-header .unified-toggle {
-    margin-right: 8px !important;
-  }
+header.app-header .theme-toggle {
+  margin-left: auto !important;
+}
 
-  header.app-header .logo {
-    display: flex !important;
-    align-items: center !important;
-    margin-right: 24px !important;
-  }
+header.app-header .unified-toggle,
+header.app-header .theme-toggle {
+  width: 40px !important;
+  height: 40px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: var(--app-text) !important;
+  transition: all 0.2s !important;
+}
 
-  header.app-header .unified-search {
-    display: flex !important;
-    align-items: center !important;
-  }
+header.app-header .unified-toggle:hover,
+header.app-header .theme-toggle:hover {
+  background-color: #f6f8fa !important;
+}
 
-  header.app-header .theme-toggle {
-    margin-left: auto !important;
-    /* 우측 끝으로 밀어냄 */
-  }
+.dark-theme header.app-header .unified-toggle:hover,
+.dark-theme header.app-header .theme-toggle:hover,
+[data-theme='dark'] header.app-header .unified-toggle:hover,
+[data-theme='dark'] header.app-header .theme-toggle:hover {
+  background-color: #30363d !important;
+}
 
-  /* 버튼 공통 스타일 가이드 적용 */
-  header.app-header .unified-toggle,
-  header.app-header .theme-toggle {
-    width: 40px !important;
-    height: 40px !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    color: var(--app-text) !important;
-    transition: all 0.2s !important;
-  }
+header.app-header svg {
+  width: 20px !important;
+  height: 20px !important;
+}
 
-  header.app-header .unified-toggle:hover,
-  header.app-header .theme-toggle:hover {
-    background-color: #f6f8fa !important;
-  }
+header.app-header .unified-search input {
+  width: 240px !important;
+  height: 38px !important;
+  background-color: #f6f8fa !important;
+  color: #1f2328 !important;
+  border: 1px solid #e3e6ed !important;
+  border-radius: 6px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+  transition: all 0.2s !important;
+}
 
-  .dark-theme header.app-header .unified-toggle:hover,
-  .dark-theme header.app-header .theme-toggle:hover,
-  [data-theme='dark'] header.app-header .unified-toggle:hover,
-  [data-theme='dark'] header.app-header .theme-toggle:hover {
-    background-color: #30363d !important;
-  }
+.dark-theme header.app-header .unified-search input,
+[data-theme='dark'] header.app-header .unified-search input {
+  background-color: #161b22 !important;
+  color: #c9d1d9 !important;
+  border-color: #30363d !important;
+}
 
-  header.app-header svg {
-    width: 20px !important;
-    height: 20px !important;
-  }
+header.app-header .unified-search input:focus {
+  width: 320px !important;
+  background-color: #ffffff !important;
+  border-color: #0969da !important;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.2) !important;
+}
 
-  header.app-header .unified-search input {
-    width: 240px !important;
-    height: 38px !important;
-    background-color: #f6f8fa !important;
-    color: #1f2328 !important;
-    border: 1px solid #e3e6ed !important;
-    border-radius: 6px !important;
-    padding: 0 12px !important;
-    font-size: 13px !important;
-    transition: all 0.2s !important;
-  }
+.dark-theme header.app-header .unified-search input:focus,
+[data-theme='dark'] header.app-header .unified-search input:focus {
+  background-color: #000000 !important;
+  border-color: #1f6feb !important;
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.2) !important;
+}
 
-  .dark-theme header.app-header .unified-search input,
-  [data-theme='dark'] header.app-header .unified-search input {
-    background-color: #161b22 !important;
-    color: #c9d1d9 !important;
-    border-color: #30363d !important;
-  }
+/* 오리지널 Docsify 요소 완전 은닉 */
+.sidebar-toggle,
+.sidebar .search,
+.github-corner {
+  display: none !important;
+}
 
-  header.app-header .unified-search input:focus {
-    width: 320px !important;
-    background-color: #ffffff !important;
-    border-color: #0969da !important;
-    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.2) !important;
-  }
+/* 사이드바 위치 및 색상 정밀 동기화 (v3.5.12) */
+section.sidebar {
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  top: 64px !important;
+  height: calc(100% - 64px) !important;
+  background-color: var(--app-sidebar-bg) !important;
+  background-image: none !important;
+  border-right: 1px solid var(--app-border) !important;
+  padding-top: 10px !important;
+  z-index: 900 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+}
 
-  .dark-theme header.app-header .unified-search input:focus,
-  [data-theme='dark'] header.app-header .unified-search input:focus {
-    background-color: #000000 !important;
-    border-color: #1f6feb !important;
-    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.2) !important;
-  }
+/* 햄버거 메뉴를 상단 헤더 내부로 시각적으로 통합 */
+.sidebar-toggle {
+  position: static !important;
+  /* Header 내부에서 Flex 정렬 */
+  width: 60px !important;
+  height: 60px !important;
+  background: transparent !important;
+  z-index: 1001 !important;
+  order: 0;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  border: none !important;
+  padding: 18px 20px !important;
+  bottom: auto !important;
+  transition: all 0.2s ease !important;
+}
 
-  /* 오리지널 Docsify 요소 완전 은닉 */
-  .sidebar-toggle,
-  .sidebar .search,
-  .github-corner {
-    display: none !important;
-  }
+.sidebar-toggle:hover {
+  background: var(--bg-tertiary) !important;
+}
 
-  /* 사이드바 위치 및 색상 정밀 동기화 (v3.5.12) */
-  section.sidebar {
-    position: fixed !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    top: 64px !important;
-    height: calc(100% - 64px) !important;
-    background-color: var(--app-sidebar-bg) !important;
-    background-image: none !important;
-    border-right: 1px solid var(--app-border) !important;
-    padding-top: 10px !important;
-    z-index: 900 !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    opacity: 1 !important;
-  }
+.sidebar-toggle-button {
+  background: transparent !important;
+  position: static !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 
-  /* 햄버거 메뉴를 상단 헤더 내부로 시각적으로 통합 */
-  .sidebar-toggle {
-    position: static !important;
-    /* Header 내부에서 Flex 정렬 */
-    width: 60px !important;
-    height: 60px !important;
-    background: transparent !important;
-    z-index: 1001 !important;
-    order: 0;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    cursor: pointer !important;
-    border: none !important;
-    padding: 18px 20px !important;
-    bottom: auto !important;
-    transition: all 0.2s ease !important;
-  }
+.sidebar-toggle span {
+  background-color: var(--accent-blue) !important;
+  height: 2px !important;
+  margin: 5px 0 !important;
+  width: 24px !important;
+  display: block !important;
+}
 
-  .sidebar-toggle:hover {
-    background: var(--bg-tertiary) !important;
-  }
+/* Docsify 기본 토글 버튼 배경 제거 */
+.sidebar-toggle-button {
+  background: transparent !important;
+  box-shadow: none !important;
+}
 
-  .sidebar-toggle-button {
-    background: transparent !important;
-    position: static !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
+/* 검색창 위치 및 스타일링 (상단 바 내부 - DOM 이동 후) */
+.search {
+  margin: 0 0 0 20px !important;
+  padding: 0 !important;
+  position: static !important;
+  z-index: 1002 !important;
+  width: auto !important;
+  order: 2;
+  display: flex !important;
+  align-items: center !important;
+}
 
-  .sidebar-toggle span {
-    background-color: var(--accent-blue) !important;
-    height: 2px !important;
-    margin: 5px 0 !important;
-    width: 24px !important;
-    display: block !important;
-  }
+.search input {
+  width: 280px !important;
+  height: 34px !important;
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 17px !important;
+  padding: 0 15px 0 38px !important;
+  font-size: 13px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
 
-  /* Docsify 기본 토글 버튼 배경 제거 */
-  .sidebar-toggle-button {
-    background: transparent !important;
-    box-shadow: none !important;
-  }
+.search input:focus {
+  width: 420px !important;
+  background: var(--bg-primary) !important;
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2) !important;
+}
 
-  /* 검색창 위치 및 스타일링 (상단 바 내부 - DOM 이동 후) */
-  .search {
-    margin: 0 0 0 20px !important;
-    padding: 0 !important;
-    position: static !important;
-    z-index: 1002 !important;
-    width: auto !important;
-    order: 2;
-    display: flex !important;
-    align-items: center !important;
-  }
+/* Docsify 내장 로고 숨기기 (헤더의 로고와 검색창을 위해) */
+.sidebar .app-name {
+  display: none !important;
+}
 
+/* 헤더 - 로고 및 다크 모드 버튼 필터 조정 */
+.app-header img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.light-theme .app-header img {
+  filter: none;
+}
+
+/* ----------------------------------------
+   테마 토글 버튼
+   ---------------------------------------- */
+.theme-toggle {
+  /* position: absolute; 제거 (Flex 대응) */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  z-index: 1005;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent-blue);
+}
+
+/* ----------------------------------------
+   사이드바
+   ---------------------------------------- */
+.sidebar {
+  top: 60px !important;
+  height: calc(100% - 60px) !important;
+  background: var(--sidebar-bg) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border-color) !important;
+  padding-top: 10px !important;
+  z-index: 900 !important;
+}
+
+.sidebar-nav {
+  padding-bottom: 40px;
+}
+
+.sidebar ul li a {
+  color: var(--text-secondary) !important;
+  font-size: 14px;
+}
+
+.sidebar ul li a:hover {
+  color: var(--accent-blue) !important;
+  background: var(--bg-tertiary) !important;
+  border-radius: 4px;
+}
+
+.sidebar ul li.active>a {
+  color: var(--accent-blue) !important;
+  font-weight: 600;
+  border-right: 2px solid var(--accent-blue);
+  background: var(--bg-tertiary);
+}
+
+/* ----------------------------------------
+   본문 콘텐츠
+   ---------------------------------------- */
+.content {
+  padding-top: 60px !important;
+}
+
+.markdown-section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 30px !important;
+  color: var(--text-primary) !important;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-top: 2rem;
+}
+
+.markdown-section a {
+  color: var(--accent-blue) !important;
+  text-decoration: none;
+}
+
+.markdown-section a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------
+   하단 네비게이션 (Docsify Pagination)
+   ---------------------------------------- */
+.docsify-pagination-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  margin-top: 50px !important;
+  padding: 30px 0 !important;
+  border-top: 1px solid var(--border-color) !important;
+  gap: 16px !important;
+}
+
+.pagination-item {
+  margin: 0 !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 15px 20px !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  background: var(--bg-secondary) !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.pagination-item--next {
+  text-align: right !important;
+  align-items: flex-end !important;
+}
+
+.pagination-item:hover {
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 4px 12px var(--card-shadow) !important;
+  transform: translateY(-2px);
+}
+
+.pagination-item-label {
+  color: var(--text-secondary) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 5px !important;
+}
+
+.pagination-item-title {
+  color: var(--accent-blue) !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+/* ----------------------------------------
+   푸터 영역
+   ---------------------------------------- */
+.app-footer {
+  margin-top: 60px;
+  padding: 30px 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ----------------------------------------
+   커스텀 푸터 텍스트 수정 (Admin.)
+   ---------------------------------------- */
+.app-footer span {
+  display: block;
+}
+
+/* ----------------------------------------
+   코드 블록 & 테이블
+   ---------------------------------------- */
+.markdown-section code {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent-blue) !important;
+  border-radius: 4px;
+}
+
+.markdown-section pre {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.markdown-section table th {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary);
+}
+
+.markdown-section table td {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* ----------------------------------------
+   반응형 모바일
+   ---------------------------------------- */
+@media screen and (max-width: 768px) {
   .search input {
-    width: 280px !important;
-    height: 34px !important;
-    background: var(--bg-tertiary) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--border-color) !important;
-    border-radius: 17px !important;
-    padding: 0 15px 0 38px !important;
-    font-size: 13px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 140px !important;
   }
 
   .search input:focus {
-    width: 420px !important;
-    background: var(--bg-primary) !important;
-    border-color: var(--accent-blue) !important;
-    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2) !important;
-  }
-
-  /* Docsify 내장 로고 숨기기 (헤더의 로고와 검색창을 위해) */
-  .sidebar .app-name {
-    display: none !important;
-  }
-
-  /* 헤더 - 로고 및 다크 모드 버튼 필터 조정 */
-  .app-header img {
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease;
-  }
-
-  .light-theme .app-header img {
-    filter: none;
-  }
-
-  /* ----------------------------------------
-   테마 토글 버튼
-   ---------------------------------------- */
-  .theme-toggle {
-    /* position: absolute; 제거 (Flex 대응) */
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-color);
-    z-index: 1005;
-    transition: all 0.2s;
-  }
-
-  .theme-toggle:hover {
-    background: var(--bg-secondary);
-    border-color: var(--accent-blue);
-  }
-
-  /* ----------------------------------------
-   사이드바
-   ---------------------------------------- */
-  .sidebar {
-    top: 60px !important;
-    height: calc(100% - 60px) !important;
-    background: var(--sidebar-bg) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-right: 1px solid var(--border-color) !important;
-    padding-top: 10px !important;
-    z-index: 900 !important;
-  }
-
-  .sidebar-nav {
-    padding-bottom: 40px;
-  }
-
-  .sidebar ul li a {
-    color: var(--text-secondary) !important;
-    font-size: 14px;
-  }
-
-  .sidebar ul li a:hover {
-    color: var(--accent-blue) !important;
-    background: var(--bg-tertiary) !important;
-    border-radius: 4px;
-  }
-
-  .sidebar ul li.active>a {
-    color: var(--accent-blue) !important;
-    font-weight: 600;
-    border-right: 2px solid var(--accent-blue);
-    background: var(--bg-tertiary);
-  }
-
-  /* ----------------------------------------
-   본문 콘텐츠
-   ---------------------------------------- */
-  .content {
-    padding-top: 60px !important;
-  }
-
-  .markdown-section {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 40px 30px !important;
-    color: var(--text-primary) !important;
-  }
-
-  .markdown-section h1,
-  .markdown-section h2,
-  .markdown-section h3 {
-    color: var(--text-primary) !important;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 8px;
-    margin-top: 2rem;
-  }
-
-  .markdown-section a {
-    color: var(--accent-blue) !important;
-    text-decoration: none;
-  }
-
-  .markdown-section a:hover {
-    text-decoration: underline;
-  }
-
-  /* ----------------------------------------
-   하단 네비게이션 (Docsify Pagination)
-   ---------------------------------------- */
-  .docsify-pagination-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px !important;
-    padding-top: 30px !important;
-    border-top: 1px solid var(--border-color) !important;
-    border-bottom: none !important;
+    width: 200px !important;
   }
 
   .pagination-item {
-    margin-top: 0 !important;
-    border: 1px solid var(--border-color) !important;
-    border-radius: 12px !important;
-    padding: 15px 20px !important;
-    width: 48% !important;
-    background: var(--bg-secondary) !important;
-    transition: all 0.2s ease !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
   }
 
-  .pagination-item:hover {
-    border-color: var(--accent-blue) !important;
-    box-shadow: 0 4px 12px var(--card-shadow) !important;
-    transform: translateY(-2px);
+  .sidebar-toggle {
+    width: 50px !important;
+    height: 50px !important;
   }
-
-  .pagination-item-label {
-    color: var(--text-secondary) !important;
-    font-size: 0.8rem !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
-    margin-bottom: 5px !important;
-  }
-
-  .pagination-item-title {
-    color: var(--accent-blue) !important;
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-  }
-
-  /* ----------------------------------------
-   푸터 영역
-   ---------------------------------------- */
-  .app-footer {
-    margin-top: 60px;
-    padding: 30px 0;
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-  }
-
-  /* ----------------------------------------
-   커스텀 푸터 텍스트 수정 (Admin.)
-   ---------------------------------------- */
-  .app-footer span {
-    display: block;
-  }
-
-  /* ----------------------------------------
-   코드 블록 & 테이블
-   ---------------------------------------- */
-  .markdown-section code {
-    background-color: var(--bg-tertiary) !important;
-    color: var(--accent-blue) !important;
-    border-radius: 4px;
-  }
-
-  .markdown-section pre {
-    background-color: var(--code-bg) !important;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-  }
-
-  .markdown-section table th {
-    background-color: var(--bg-tertiary) !important;
-    color: var(--text-primary);
-  }
-
-  .markdown-section table td {
-    background-color: var(--bg-secondary) !important;
-  }
-
-  /* ----------------------------------------
-   반응형 모바일
-   ---------------------------------------- */
-  @media screen and (max-width: 768px) {
-    .search input {
-      width: 140px !important;
-    }
-
-    .search input:focus {
-      width: 200px !important;
-    }
-
-    .pagination-item {
-      width: 100% !important;
-      margin-bottom: 10px !important;
-    }
-
-    .sidebar-toggle {
-      width: 50px !important;
-      height: 50px !important;
-    }
-  }
+}
