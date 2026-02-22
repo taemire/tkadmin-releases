@@ -9,7 +9,7 @@
 대시보드의 모든 데이터는 **SSE(Server-Sent Events)**를 통해 실시간으로 갱신됩니다. 서버에서 상태가 변경될 때만 데이터가 실시간으로 Push되어 네트워크 오버헤드가 기존 폴링 방식 대비 **99% 감소**했습니다. 또한 리눅스 **cgroup v2**를 직접 읽어 프로세스 리소스를 측정함으로써 CPU 부하를 **79% 절감**하여 저사양 환경에서도 안정적으로 동작합니다.
 
 <!-- 스크린샷: 대시보드 전체 화면 -->
-![대시보드 전체 화면](../../assets/images/user/02_dashboard_overview.png)
+![대시보드 전체 화면](assets/images/user/02_dashboard_overview.png)
 
 ---
 
@@ -18,7 +18,7 @@
 대시보드 상단(헤더 바 내부)에는 장애 경보 배너가 위치합니다.
 
 <!-- 스크린샷: 장애 경보 배너 -->
-![장애 경보 배너](../../assets/images/user/02_dashboard_alert_banner.png)
+![장애 경보 배너](assets/images/user/02_dashboard_alert_banner.png)
 
 | 상태 | 동작 |
 |------|------|
@@ -39,7 +39,7 @@
 3. 목록에서 **'모두 읽음'** 버튼을 클릭하면 모든 알림이 읽음 처리되고 뱃지가 사라집니다.
 
 <!-- 스크린샷: 알림 버튼 뱃지 및 팝오버 -->
-![알림 버튼 뱃지](../../assets/images/user/02_dashboard_alert_badge.png)
+![알림 버튼 뱃지](assets/images/user/02_dashboard_alert_badge.png)
 
 알림 시스템은 **10초 주기**로 서버에 새로운 알림이 있는지 자동으로 확인합니다.
 
@@ -52,7 +52,7 @@
 ### 1. 라이선스 / 기관 정보
 
 <!-- 스크린샷: 라이선스 기관 정보 카드 -->
-![라이선스 기관 정보 카드](../../assets/images/user/02_dashboard_license_card.png)
+![라이선스 기관 정보 카드](assets/images/user/02_dashboard_license_card.png)
 
 TACHYON 솔루션의 라이선스 및 기관 정보를 표시합니다.
 
@@ -69,7 +69,7 @@ TACHYON 솔루션의 라이선스 및 기관 정보를 표시합니다.
 ### 2. 시스템 가동 시간
 
 <!-- 스크린샷: 시스템 가동 시간 카드 -->
-![시스템 가동 시간 카드](../../assets/images/user/02_dashboard_uptime_card.png)
+![시스템 가동 시간 카드](assets/images/user/02_dashboard_uptime_card.png)
 
 서버의 가동 시간(Uptime)을 표시합니다.
 
@@ -85,7 +85,7 @@ TACHYON 솔루션의 라이선스 및 기관 정보를 표시합니다.
 ### 3. CPU 사용률
 
 <!-- 스크린샷: CPU 사용률 카드 -->
-![CPU 사용률 카드](../../assets/images/user/02_dashboard_cpu_card.png)
+![CPU 사용률 카드](assets/images/user/02_dashboard_cpu_card.png)
 
 서버의 실시간 CPU 사용률을 프로그레스 바와 함께 표시합니다.
 
@@ -102,7 +102,7 @@ TACHYON 솔루션의 라이선스 및 기관 정보를 표시합니다.
 ### 4. 메모리 상태
 
 <!-- 스크린샷: 메모리 상태 카드 -->
-![메모리 상태 카드](../../assets/images/user/02_dashboard_memory_card.png)
+![메모리 상태 카드](assets/images/user/02_dashboard_memory_card.png)
 
 서버의 메모리 사용 현황을 상세하게 표시합니다.
 
@@ -118,7 +118,7 @@ TACHYON 솔루션의 라이선스 및 기관 정보를 표시합니다.
 ### 5. 디스크 사용량
 
 <!-- 스크린샷: 디스크 사용량 카드 -->
-![디스크 사용량 카드](../../assets/images/user/02_dashboard_disk_card.png)
+![디스크 사용량 카드](assets/images/user/02_dashboard_disk_card.png)
 
 서버의 디스크 사용 현황을 루트 디스크와 제품 디렉토리별로 구분하여 표시합니다.
 
@@ -149,7 +149,7 @@ TACHYON 설치 경로(`/usr/local/TACHYON/TTS40/`) 아래의 주요 디렉토리
 ### 6. 서비스 리소스 상태 점검
 
 <!-- 스크린샷: 서비스 리소스 상태 점검 테이블 -->
-![서비스 리소스 상태 점검](../../assets/images/user/02_dashboard_service_table.png)
+![서비스 리소스 상태 점검](assets/images/user/02_dashboard_service_table.png)
 
 TACHYON 솔루션에 포함된 모든 서비스의 실시간 리소스 상태를 테이블 형태로 표시합니다.
 

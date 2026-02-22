@@ -116,7 +116,7 @@ TACHYON 솔루션 전반의 설정 파일(`.yml`, `.properties`, `.conf` 등)을
 ## 화면 구성 미리보기
 
 <!-- 스크린샷: 대시보드 전체 화면 -->
-![대시보드 전체 화면](../../assets/images/user/01_overview_dashboard.png)
+![대시보드 전체 화면](assets/images/user/01_overview_dashboard.png)
 
 tkadmin의 메인 화면은 다음과 같은 영역으로 구성됩니다:
 

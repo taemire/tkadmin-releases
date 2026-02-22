@@ -7,7 +7,7 @@
 이 화면에서 편집하는 설정은 `tkadmin.yml` 파일에 저장되며, 솔루션 이름, 네트워크 포트, 비상 접근 IP, 관리콘솔 통합 설정, 로깅 설정 등을 관리합니다.
 
 <!-- 스크린샷: 내/외부 설정 편집기 전체 화면 -->
-![내/외부 설정 편집기](../../assets/images/user/02_config_editor_overview.png)
+![내/외부 설정 편집기](assets/images/user/02_config_editor_overview.png)
 
 ---
 
@@ -46,7 +46,7 @@
 포트 필드 옆에는 **'재시작 필요'** 태그가 노란색 뱃지로 표시되어, 이 값을 변경하면 서비스 재시작이 필요하다는 점을 시각적으로 안내합니다.
 
 <!-- 스크린샷: 포트 설정 재시작 필요 태그 -->
-![포트 설정 재시작 필요 태그](../../assets/images/user/02_config_port_restart_tag.png)
+![포트 설정 재시작 필요 태그](assets/images/user/02_config_port_restart_tag.png)
 
 !> **주의**: 포트를 변경하면 NGINX 리버스 프록시 설정도 자동으로 동기화됩니다. 변경 후 서비스가 재시작되면 새 포트로 접속해야 합니다.
 
@@ -55,7 +55,7 @@
 ### 긴급 접속 허용 IP (Emergency IPs)
 
 <!-- 스크린샷: 긴급 접속 허용 IP 설정 -->
-![긴급 접속 허용 IP 설정](../../assets/images/user/02_config_emergency_ips.png)
+![긴급 접속 허용 IP 설정](assets/images/user/02_config_emergency_ips.png)
 
 | 항목 | 내용 |
 |------|------|
@@ -98,7 +98,7 @@
 TACHYON 대시보드와의 통합 연동을 제어하는 설정입니다.
 
 <!-- 스크린샷: 관리콘솔 통합 설정 영역 -->
-![관리콘솔 통합 설정](../../assets/images/user/02_config_console_integration.png)
+![관리콘솔 통합 설정](assets/images/user/02_config_console_integration.png)
 
 #### 링크 노출 여부 (show_link)
 
@@ -170,7 +170,7 @@ tkadmin 자체의 로깅 정책을 설정합니다.
 5. 설정 폼이 저장된 최신 값으로 자동 갱신됩니다.
 
 <!-- 스크린샷: 설정 저장 성공 토스트 메시지 -->
-![설정 저장 성공 토스트](../../assets/images/user/02_config_save_toast.png)
+![설정 저장 성공 토스트](assets/images/user/02_config_save_toast.png)
 
 ### 포트 변경 시 저장
 
@@ -184,7 +184,7 @@ tkadmin 자체의 로깅 정책을 설정합니다.
    - 버튼: **'취소'** / **'확인'**
 
 <!-- 스크린샷: 포트 변경 확인 모달 -->
-![포트 변경 확인 모달](../../assets/images/user/02_config_port_confirm_modal.png)
+![포트 변경 확인 모달](assets/images/user/02_config_port_confirm_modal.png)
 
 4. **'확인'**을 클릭하면:
    - 설정이 저장됩니다.

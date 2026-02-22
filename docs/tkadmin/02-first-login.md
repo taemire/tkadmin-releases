@@ -11,7 +11,7 @@ tkadmin은 TACHYON 대시보드와 긴밀하게 통합되어 있습니다. 가�
 3. Auth Bridge가 자동으로 인증을 처리하고 tkadmin 메인 화면으로 이동합니다.
 
 <!-- 스크린샷: TACHYON 사이드바의 Admin 메뉴 -->
-![TACHYON 사이드바 Admin 메뉴](../../assets/images/user/02_tachyon_sidebar_admin.png)
+![TACHYON 사이드바 Admin 메뉴](assets/images/user/02_tachyon_sidebar_admin.png)
 
 ### 방법 2: 시스템 설정 페이지
 
@@ -20,7 +20,7 @@ tkadmin은 TACHYON 대시보드와 긴밀하게 통합되어 있습니다. 가�
 3. 우측 상단의 **'tkadmin 이동'** 버튼을 클릭합니다.
 
 <!-- 스크린샷: 시스템 설정 페이지의 tkadmin 이동 버튼 -->
-![시스템 설정 페이지 tkadmin 버튼](../../assets/images/user/02_tachyon_settings_button.png)
+![시스템 설정 페이지 tkadmin 버튼](assets/images/user/02_tachyon_settings_button.png)
 
 ### Auth Bridge 인증 흐름
 
@@ -63,7 +63,7 @@ http://[서버IP]:13701/tkadmin/
 2. Recovery 로그인 화면이 표시됩니다.
 
 <!-- 스크린샷: Recovery Mode 로그인 화면 -->
-![Recovery Mode 로그인 화면](../../assets/images/user/02_recovery_login.png)
+![Recovery Mode 로그인 화면](assets/images/user/02_recovery_login.png)
 
 3. **운영체제(OS) 계정**의 사용자명과 비밀번호를 입력합니다.
    - TACHYON 계정이 아닌 Linux OS 계정(PAM 인증)을 사용합니다.
@@ -84,7 +84,7 @@ Recovery 포트는 보안을 위해 IP 기반 접근 제어가 적용됩니다:
 허용되지 않은 IP에서 접근 시, **403 Forbidden** 페이지가 표시되며 차단 사유가 안내됩니다.
 
 <!-- 스크린샷: IP 차단 시 403 페이지 -->
-![IP 차단 403 페이지](../../assets/images/user/02_recovery_403.png)
+![IP 차단 403 페이지](assets/images/user/02_recovery_403.png)
 
 !> **주의**: Recovery Mode는 긴급 상황에서만 사용하세요. 평상시에는 TACHYON 대시보드를 통한 정상 접근을 권장합니다.
 
@@ -97,7 +97,7 @@ Recovery 포트는 보안을 위해 IP 기반 접근 제어가 적용됩니다:
 tkadmin에 접속하면 다음과 같은 화면 구성을 확인할 수 있습니다:
 
 <!-- 스크린샷: tkadmin 전체 화면 레이아웃 -->
-![tkadmin 화면 구성](../../assets/images/user/02_layout_overview.png)
+![tkadmin 화면 구성](assets/images/user/02_layout_overview.png)
 
 ### 1. 상단 헤더 바
 
