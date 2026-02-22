@@ -1,6 +1,6 @@
 <!-- tkadmin 운영자 메뉴얼 커버페이지 -->
 
-![tkadmin 로고](../assets/images/logo_admin.svg ':size=280')
+
 
 # tkadmin
 
