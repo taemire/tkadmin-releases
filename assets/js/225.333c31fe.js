@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkusers_msjang_wdata_tmp_mdx_poc_test=globalThis.webpackChunkusers_msjang_wdata_tmp_mdx_poc_test||[]).push([[225],{225(s,e,t){t.d(e,{createArchitectureServices:()=>a.S});var a=t(7713);t(808)}}]);

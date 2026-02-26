@@ -55,6 +55,7 @@ sudo /usr/local/tkadmin/bin/tkadmin -i
 - **Auth Bridge**: TACHYON SPA 세션과 자동 연동, 별도 로그인 불필요
 - **Watchdog & Alert**: 실시간 장애 감지, 자동 복구 및 관리자 알림
 - **SSE 실시간 Push**: Server-Sent Events 기반 대시보드 실시간 갱신 (CPU 부하 79% 절감)
+- **표준 런타임 관리**: 리눅스 표준 전술에 일치하는 `/run/tkadmin` PID 관리 및 `conf/` 설정 체계 도입
 - **tkctl 통합**: 내장 CLI를 통한 한 줄 설치·삭제·운영 자동화
 - **오프라인 매뉴얼**: Docsify 기반, 폐쇄망 환경에서도 100% 동작
 
