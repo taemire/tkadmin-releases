@@ -56,15 +56,17 @@ sudo /usr/local/tkadmin/bin/tkadmin -i
 - **Watchdog & Alert**: 실시간 장애 감지, 자동 복구 및 관리자 알림
 - **SSE 실시간 Push**: Server-Sent Events 기반 대시보드 실시간 갱신 (CPU 부하 79% 절감)
 - **표준 런타임 관리**: 리눅스 표준 전술에 일치하는 `/run/tkadmin` PID 관리 및 `conf/` 설정 체계 도입
+- **쿼리마법사**: MariaDB + OpenSearch 듀얼엔진 쿼리 실행, NDJSON 스트리밍, VirtualTable 가상 스크롤, 커서 페이지네이션
+- **리포트마법사**: DnD 위자드 기반 커스텀 리포트 빌더 (49종 로그 카탈로그, 코드 자동 해석, Excel/PDF 내보내기, 템플릿 관리)
 - **tkctl 통합**: 내장 CLI를 통한 한 줄 설치·삭제·운영 자동화
-- **오프라인 매뉴얼**: Docsify 기반, 폐쇄망 환경에서도 100% 동작
+- **오프라인 매뉴얼**: Docusaurus 기반, 폐쇄망 환경에서도 100% 동작
 
 ## 🛠 기술 스택
 
 - **Backend**: Go (Gin Web Framework)
 - **Frontend**: Vanilla JS (Web Components) + Vanilla CSS
 - **Database/Middleware**: MariaDB, Redis, OpenSearch, Kafka 연동
-- **Documentation**: Docsify (오프라인 내장) + Live UI Mockup 렌더러
+- **Documentation**: Docusaurus (오프라인 내장) + Live UI Mockup 렌더러
 
 ## 🏗 프로젝트 구조
 
@@ -79,14 +81,16 @@ tkadmin/
 │   ├── backup/             # 백업 스케줄러
 │   ├── config/             # 환경 정보 탐색 및 설정 관리
 │   ├── db/                 # SQLite 데이터베이스 연결
+│   ├── dbconsole/          # DB 쿼리 실행 엔진 (MariaDB + OpenSearch 듀얼엔진, 스트리밍, 페이지네이션)
 │   ├── deploy/             # 시스템 서비스 제어, tkctl 자가 치유
 │   ├── logger/             # Zap 구조화 로깅
-│   ├── system/             # 시스템 모니터링 (CPU/메모리/디스크)
-│   └── systemd/            # Watchdog, cgroup v2 직접 읽기
+│   ├── querywizard/        # 쿼리마법사 + 리포트마법사 (JDBC 드라이버, 리포트 빌더)
+│   ├── systemd/            # Watchdog, cgroup v2 직접 읽기
+│   └── tkctl/              # tkctl CLI 클라이언트 핵심 로직
 ├── web/
 │   ├── static/             # CSS, JS, Assets
 │   ├── templates/          # HTML 템플릿
-│   └── manual/             # Docsify 사용자 매뉴얼 (go:embed 내장)
+│   └── docusaurus/         # Docusaurus 사용자 매뉴얼 (go:embed 내장)
 │       ├── tkadmin/        # 운영자 메뉴얼
 │       └── tkctl/          # CLI 가이드
 └── .github/workflows/
