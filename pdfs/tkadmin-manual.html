@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TACHYON Admin v0.6.36</title>
+    <title>TACHYON Admin v0.6.37</title>
     <!-- Pretendard Font -->
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -1006,7 +1006,7 @@
             <div class="main-content">
                 <div class="title">TACHYON Admin</div>
                 
-                <div class="version">Version 0.6.36</div>
+                <div class="version">Version 0.6.37</div>
             </div>
 
             <div class="footer">
@@ -2582,7 +2582,7 @@
                     </li>
                     
                     <li class="toc-sub">
-                        <a href="#2-unixlinux---u-01--u-30">2. Unix/Linux 서버 점검 (U-01 ~ U-30)</a>
+                        <a href="#2-unixlinux---u-01--u-67">2. Unix/Linux 서버 점검 (U-01 ~ U-67)</a>
                         <span class="toc-dots"></span><span
                             class="toc-page">192</span>
                     </li>
@@ -2590,68 +2590,68 @@
                     <li class="toc-sub">
                         <a href="#3-dbms-mariadbmysql--d-01--d-10">3. DBMS (MariaDB/MySQL) 점검 (D-01 ~ D-10)</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">194</span>
+                            class="toc-page">197</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#4-web-server-nginx--n-01--n-10">4. Web Server (Nginx) 점검 (N-01 ~ N-10)</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">195</span>
+                            class="toc-page">197</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#5---">5. 상세 구현 지침</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">196</span>
+                            class="toc-page">198</span>
                     </li>
                     
                     
                     <li>
                         <a href="#security_analysis_guide_2026">주요정보통신기반시설 기술적 취약점 분석·평가 가이드 (2026)</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">198</span>
+                            class="toc-page">200</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#1---">1. 개요 및 목적</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">198</span>
+                            class="toc-page">200</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#2------unixlinux-">2. 진단 대상 및 분류 체계 (Unix/Linux 서버)</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">198</span>
+                            class="toc-page">200</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#3-unixlinux-----u-01--u-67">3. Unix/Linux 서버 점검 항목 상세 (U-01 ~ U-67)</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">199</span>
+                            class="toc-page">201</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#4-tkctl---">4. tkctl 구현 시 고려사항</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">233</span>
+                            class="toc-page">235</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#5-----web-01--web-26">5. 웹 서비스 점검 항목 (WEB-01 ~ WEB-26)</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">234</span>
+                            class="toc-page">236</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#6-dbms---d-01--d-26">6. DBMS 점검 항목 (D-01 ~ D-26)</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">236</span>
+                            class="toc-page">238</span>
                     </li>
                     
                     <li class="toc-sub">
                         <a href="#7-tachyon----">7. TACHYON 환경 특화 매핑 테이블</a>
                         <span class="toc-dots"></span><span
-                            class="toc-page">239</span>
+                            class="toc-page">241</span>
                     </li>
                     
                     
@@ -13778,7 +13778,7 @@ type Scanner interface {
 }
 </code></pre>
 <hr>
-<h2 id="2-unixlinux---u-01--u-30">2. Unix/Linux 서버 점검 (U-01 ~ U-30)</h2>
+<h2 id="2-unixlinux---u-01--u-67">2. Unix/Linux 서버 점검 (U-01 ~ U-67)</h2>
 <p>대상: RHEL/CentOS/Rocky, Ubuntu/Debian 계열</p>
 <table>
 <thead>
@@ -14000,6 +14000,265 @@ type Scanner interface {
 <td style="text-align:left">상</td>
 <td style="text-align:left">최신 버전 사용 여부</td>
 <td style="text-align:left">패키지 매니저 버전 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-31</strong></td>
+<td style="text-align:left"><strong>스팸 메일 릴레이 제한</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">SMTP 릴레이 설정</td>
+<td style="text-align:left"><code>smtpd_relay_restrictions</code> 설정 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-32</strong></td>
+<td style="text-align:left"><strong>일반사용자 Sendmail 실행 방지</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">Sendmail 실행 권한</td>
+<td style="text-align:left"><code>chmod 2555 /usr/sbin/sendmail</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-33</strong></td>
+<td style="text-align:left"><strong>DNS 보안 버전 패치</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">BIND 버전</td>
+<td style="text-align:left">최신 버전 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-34</strong></td>
+<td style="text-align:left"><strong>DNS Zone Transfer 제한</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">Zone Transfer 설정</td>
+<td style="text-align:left"><code>allow-transfer</code> 설정 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-35</strong></td>
+<td style="text-align:left"><strong>Apache 디렉터리 리스팅 제거</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">Indexes 옵션</td>
+<td style="text-align:left">httpd.conf에서 <code>Indexes</code> 제거</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-36</strong></td>
+<td style="text-align:left"><strong>Apache 프로세스 권한 제한</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">실행 계정</td>
+<td style="text-align:left">비root 계정으로 구동 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-37</strong></td>
+<td style="text-align:left"><strong>Apache 상위 디렉터리 접근 금지</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">AllowOverride</td>
+<td style="text-align:left"><code>AllowOverride None</code> 설정</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-38</strong></td>
+<td style="text-align:left"><strong>Apache 불필요 파일 제거</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">매뉴얼 파일</td>
+<td style="text-align:left">웹 루트 내 매뉴얼/샘플 파일 제거</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-39</strong></td>
+<td style="text-align:left"><strong>Apache 링크 사용 제한</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">FollowSymLinks</td>
+<td style="text-align:left"><code>Options -FollowSymLinks</code> 설정</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-40</strong></td>
+<td style="text-align:left"><strong>Apache 파일 업로드/다운로드 제한</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">LimitRequestBody</td>
+<td style="text-align:left">업로드 용량 제한 설정</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-41</strong></td>
+<td style="text-align:left"><strong>Apache 웹 서비스 영역 분리</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">DocumentRoot</td>
+<td style="text-align:left">별도 디렉터리 지정 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-42</strong></td>
+<td style="text-align:left"><strong>SSH 원격 접속 허용</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">SSH 서비스</td>
+<td style="text-align:left">SSH 활성화 및 포트 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-43</strong></td>
+<td style="text-align:left"><strong>FTP 서비스 확인</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">FTP 서비스</td>
+<td style="text-align:left">미사용 시 비활성화</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-44</strong></td>
+<td style="text-align:left"><strong>FTP 계정 Shell 제한</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">FTP 계정 쉘</td>
+<td style="text-align:left"><code>/sbin/nologin</code> 쉘 부여</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-45</strong></td>
+<td style="text-align:left"><strong>Ftpusers 파일 소유자/권한</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">ftpusers 파일</td>
+<td style="text-align:left"><code>chmod 640</code> 권한 설정</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-46</strong></td>
+<td style="text-align:left"><strong>Ftpusers 파일 설정</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">root 접속 제한</td>
+<td style="text-align:left">ftpusers 파일에 root 포함</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-47</strong></td>
+<td style="text-align:left"><strong>at 파일 소유자/권한</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">at 접근 제어</td>
+<td style="text-align:left"><code>chmod 640 /etc/at.allow</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-48</strong></td>
+<td style="text-align:left"><strong>SNMP 서비스 확인</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">SNMP 서비스</td>
+<td style="text-align:left">미사용 시 비활성화</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-49</strong></td>
+<td style="text-align:left"><strong>SNMP Community String 복잡성</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">public/private 사용</td>
+<td style="text-align:left">복잡한 문자열로 변경</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-50</strong></td>
+<td style="text-align:left"><strong>로그온 시 경고 메시지 설정</strong></td>
+<td style="text-align:left">하</td>
+<td style="text-align:left">배너 설정</td>
+<td style="text-align:left"><code>/etc/issue</code>, <code>/etc/issue.net</code> 설정</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-51</strong></td>
+<td style="text-align:left"><strong>NFS 설정파일 접근 권한</strong></td>
+<td style="text-align:left">하</td>
+<td style="text-align:left">/etc/exports 권한</td>
+<td style="text-align:left"><code>chmod 644 /etc/exports</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-52</strong></td>
+<td style="text-align:left"><strong>SMTP expn, vrfy 제한</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">SMTP 명령어</td>
+<td style="text-align:left"><code>disable_vrfy_command = yes</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-53</strong></td>
+<td style="text-align:left"><strong>Apache 웹 서버 정보 숨김</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">ServerTokens</td>
+<td style="text-align:left"><code>ServerTokens Prod</code> 설정</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-54</strong></td>
+<td style="text-align:left"><strong>최신 보안 패치 적용</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">OS 패키지</td>
+<td style="text-align:left"><code>yum check-update --security</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-55</strong></td>
+<td style="text-align:left"><strong>로그의 정기적 검토 및 보고</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">로그 검토</td>
+<td style="text-align:left">로그 검토 정책 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-56</strong></td>
+<td style="text-align:left"><strong>정책에 따른 시스템 로깅 설정</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">rsyslog 설정</td>
+<td style="text-align:left"><code>/etc/rsyslog.conf</code> 정책 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-57</strong></td>
+<td style="text-align:left"><strong>hosts.lpd 파일 소유자/권한</strong></td>
+<td style="text-align:left">하</td>
+<td style="text-align:left">hosts.lpd 파일</td>
+<td style="text-align:left"><code>chmod 600 /etc/hosts.lpd</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-58</strong></td>
+<td style="text-align:left"><strong>불필요한 SNMP 서비스 구동 점검</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">SNMP 활성화</td>
+<td style="text-align:left"><code>systemctl stop snmpd</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-59</strong></td>
+<td style="text-align:left"><strong>안전한 SNMP 버전 사용</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">SNMPv3</td>
+<td style="text-align:left">v3 이상 사용 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-60</strong></td>
+<td style="text-align:left"><strong>SNMP Community String 복잡성 설정</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">기본값 변경</td>
+<td style="text-align:left"><code>public</code> → 복잡한 문자열</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-61</strong></td>
+<td style="text-align:left"><strong>SNMP Access Control 설정</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">접근 제어</td>
+<td style="text-align:left">IP 기반 ACL 설정 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-62</strong></td>
+<td style="text-align:left"><strong>로그인 시 경고 메시지 설정</strong></td>
+<td style="text-align:left">하</td>
+<td style="text-align:left">SSH 배너</td>
+<td style="text-align:left"><code>/etc/ssh/sshd_config</code> Banner 설정</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-63</strong></td>
+<td style="text-align:left"><strong>sudo 명령어 접근 관리</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">sudoers 권한</td>
+<td style="text-align:left"><code>/etc/sudoers</code> 권한 440 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-64</strong></td>
+<td style="text-align:left"><strong>주기적 보안 패치 및 벤더 권고사항 적용</strong></td>
+<td style="text-align:left">상</td>
+<td style="text-align:left">패치 정책</td>
+<td style="text-align:left">정기 패치 관리 체계 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-65</strong></td>
+<td style="text-align:left"><strong>NTP 및 시각 동기화 설정</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">Chrony/NTP</td>
+<td style="text-align:left"><code>chronyd</code> 활성화 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-66</strong></td>
+<td style="text-align:left"><strong>정책에 따른 시스템 로깅 설정</strong></td>
+<td style="text-align:left">중</td>
+<td style="text-align:left">rsyslog 정책</td>
+<td style="text-align:left">로그 정책 적용 확인</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>U-67</strong></td>
+<td style="text-align:left"><strong>정책에 따른 감사 로그 저장 및 관리</strong></td>
+<td style="text-align:left">하</td>
+<td style="text-align:left">감사 로그</td>
+<td style="text-align:left">logrotate 6개월 보존 확인</td>
 </tr>
 </tbody>
 </table>
